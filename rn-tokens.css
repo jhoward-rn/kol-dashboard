@@ -1,0 +1,238 @@
+/* ─────────────────────────────────────────────────────────────
+   Red Nucleus — Base Design System
+   Foundation tokens. Source: RN Base Design System (Shadcn UI) v1.0.3
+   ───────────────────────────────────────────────────────────── */
+
+/* Inter — UI/labels (Google Fonts) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+/* IBM Plex Mono — small caps labels & code */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap");
+/* Crimson Pro — display fallback for FK Display (closest free alt) */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300..900;1,300..900&display=swap");
+/* Hubballi — italic logotype "nucleus" half (rough match) */
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
+
+:root {
+  /* ── BRAND PALETTE ───────────────────────────────── */
+  --rn-red:           rgb(225, 31, 38);   /* logo dot */
+  --rn-mint:          rgb(19, 211, 119);  /* primary action / Emerald-500 */
+  --rn-mint-200:      rgb(112, 255, 229); /* highlight tint */
+  --rn-deep-teal:     rgb(30, 107, 92);   /* secondary */
+  --rn-dark-teal:     rgb(14, 67, 67);    /* deep brand fg, body text */
+  --rn-sage:          rgb(96, 159, 147);  /* muted brand fg */
+  --rn-sage-200:      rgb(191, 202, 200); /* separators on brand */
+  --rn-ink:           rgb(8, 22, 30);     /* near-black for hero bg */
+
+  /* Brand accent (rare — supporting) */
+  --rn-blue:          rgb(29, 104, 250);
+  --rn-purple:        rgb(151, 71, 255);
+
+  /* ── UX (NEUTRAL) PALETTE — slate scale ───────────── */
+  --slate-50:  rgb(248, 250, 252);
+  --slate-100: rgb(241, 245, 249);
+  --slate-200: rgb(226, 232, 240);
+  --slate-300: rgb(203, 213, 225);
+  --slate-400: rgb(148, 163, 184);
+  --slate-500: rgb(100, 116, 139);
+  --slate-600: rgb(71,  85, 105);
+  --slate-700: rgb(51,  65,  85);
+  --slate-800: rgb(30,  41,  59);
+  --slate-900: rgb(15,  23,  42);
+  --slate-950: rgb(2,    6,  23);
+
+  /* Gray (UI text steps used in Figma) */
+  --gray-50:  rgb(249, 250, 251);
+  --gray-100: rgb(243, 244, 246);
+  --gray-200: rgb(229, 231, 235);
+  --gray-300: rgb(209, 213, 219);
+  --gray-500: rgb(107, 114, 128);
+  --gray-700: rgb(31,  41,  55);
+  --gray-900: rgb(3,    7,  18);
+
+  /* ── SEMANTIC ────────────────────────────────────── */
+  --color-bg:           #ffffff;
+  --color-bg-elev:      #ffffff;
+  --color-bg-muted:     var(--gray-100);
+  --color-bg-subtle:    var(--gray-50);
+  --color-bg-inverse:   var(--rn-ink);
+
+  --color-fg:           var(--rn-dark-teal);     /* body text, headings */
+  --color-fg-muted:     var(--rn-sage);          /* descriptions */
+  --color-fg-subtle:    var(--gray-500);
+  --color-fg-inverse:   #ffffff;
+
+  --color-border:       var(--slate-500);
+  --color-border-subtle:var(--gray-200);
+  --color-ring:         var(--rn-mint);
+
+  --color-primary:      var(--rn-mint);
+  --color-primary-fg:   var(--rn-dark-teal);
+  --color-secondary:    var(--rn-deep-teal);
+  --color-secondary-fg: #ffffff;
+
+  --color-success:      var(--rn-mint);
+  --color-destructive:  rgb(239, 68, 68);
+  --color-destructive-fg: #ffffff;
+
+  /* ── TYPOGRAPHY ──────────────────────────────────── */
+  --font-display: "Crimson Pro", "FK Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans:    "Inter", "FK Grotesk Neue", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Inter", "FK Grotesk Neue", system-ui, sans-serif;
+  --font-mono:    "IBM Plex Mono", "Menlo", "Roboto Mono", ui-monospace, monospace;
+  --font-logo-italic: "Hubballi", "Crimson Pro", Georgia, serif;
+
+  /* Sizes (matching Figma scale) */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   18px;
+  --text-xl:   20px;
+  --text-2xl:  24px;
+  --text-3xl:  30px;
+  --text-4xl:  36px;
+  --text-5xl:  48px;
+  --text-7xl:  72px;
+  --text-8xl:  96px;
+  --text-9xl:  128px;
+
+  /* ── SPACING (Tailwind scale, in px) ─────────────── */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+
+  /* ── RADIUS ─────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+  --radius-full: 9999px;
+
+  /* ── SHADOWS ────────────────────────────────────── */
+  --shadow-sm:    0 1px 2px 0 rgba(0,0,0,0.05);
+  --shadow:       0 1px 3px 0 rgba(0,0,0,0.10), 0 1px 2px -1px rgba(0,0,0,0.10);
+  --shadow-md:    0 4px 6px -1px rgba(0,0,0,0.10), 0 2px 4px -2px rgba(0,0,0,0.10);
+  --shadow-lg:    0 10px 15px -3px rgba(0,0,0,0.10), 0 4px 6px -4px rgba(0,0,0,0.10);
+  --shadow-xl:    0 20px 25px -5px rgba(0,0,0,0.10), 0 8px 10px -6px rgba(0,0,0,0.10);
+  --shadow-2xl:   0 25px 50px -12px rgba(0,0,0,0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(12,12,13,0.05);
+}
+
+/* ── SEMANTIC TYPE STYLES ─────────────────────────── */
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--color-fg);
+  background: var(--color-bg);
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-5xl);     /* 48px desktop */
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--color-fg);
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-4xl);     /* 36px */
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--color-fg);
+}
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-3xl);     /* 30px */
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--color-fg);
+}
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-2xl);     /* 24px */
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--color-fg);
+}
+
+p, .p {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.65;
+  color: var(--color-fg);
+}
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  line-height: 1.5;
+  color: var(--color-fg-muted);
+}
+.large {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--color-fg);
+}
+.small {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--color-fg);
+}
+.muted {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: var(--color-fg-muted);
+}
+code, .code {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background: var(--gray-100);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  color: var(--rn-dark-teal);
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-fg-subtle);
+}
+.token {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--rn-dark-teal);
+}
+
+/* ── FOCUS RING ───────────────────────────────────── */
+.rn-focusable:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
