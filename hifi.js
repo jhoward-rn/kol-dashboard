@@ -1030,13 +1030,13 @@
     };
   }
 
-  // ── Tweaks ──
-  const tweaks = $('#tweaks'), tweaksToggle = $('#tweaksToggle');
-  tweaksToggle.addEventListener('click', () => {
-    const open = tweaks.dataset.open !== 'true';
-    tweaks.dataset.open = String(open);
-  });
-  $('#tweaksClose').addEventListener('click', () => tweaks.dataset.open = 'false');
+  // ── Tweaks (panel commented out in HTML) ──
+  // const tweaks = $('#tweaks'), tweaksToggle = $('#tweaksToggle');
+  // tweaksToggle.addEventListener('click', () => {
+  //   const open = tweaks.dataset.open !== 'true';
+  //   tweaks.dataset.open = String(open);
+  // });
+  // $('#tweaksClose').addEventListener('click', () => tweaks.dataset.open = 'false');
   $$('.seg-ctrl').forEach(seg => {
     const key = seg.dataset.tweak;
     if (!key) return;
