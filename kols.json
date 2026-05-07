@@ -1,10 +1,10 @@
 [
   {
-    "name": "Astrid Andersen",
+    "name": "Tobias Brandt",
     "tier": "ME",
     "focusArea": null,
-    "institution": "Curie Institute Paris",
-    "specialty": "Ped Endo",
+    "institution": "Charité – Universitätsmedizin Berlin",
+    "specialty": "Pediatric Endocrinology",
     "research": "",
     "segment": "Vocal Advocate",
     "segmentMeta": {
@@ -29,10 +29,12 @@
       "Q1 '25",
       "Q2 '25",
       "Q3 '25",
-      "Q4 '25"
+      "Q4 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 24,
+    "totalEngagements": 26,
     "engagements": [
       {
         "quarter": "Q4 '25",
@@ -273,6 +275,46 @@
         "stakeholders": "Katrin Sørensen",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Advance dialogue on FGFR3 pathway data and clinical implications",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Olivier Keller",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Collaborative review of manuscript on ACH natural history",
+        "channel": "- Publication support",
+        "type": "- Publication support",
+        "stakeholders": "Olivier Keller",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Oral presentation of treatment outcomes at ENDO 2026",
+        "channel": "- Congress presentation",
+        "type": "- Congress presentation",
+        "stakeholders": "Olivier Keller",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Share updated data package and gather insights on treatment barriers",
+        "channel": "- MSL scientific exchange",
+        "type": "- MSL scientific exchange",
+        "stakeholders": "Olivier Keller",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -416,14 +458,20 @@
           "Mentions": 11
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Sofia Van den Berg",
+    "name": "Anna Hoffmann",
     "tier": "ME",
     "focusArea": null,
-    "institution": "NKI Amsterdam",
-    "specialty": "Ped Endo",
+    "institution": "Dr. von Hauner Children's Hospital Munich",
+    "specialty": "Pediatric Endocrinology",
     "research": "",
     "segment": "Vocal Advocate",
     "segmentMeta": {
@@ -448,10 +496,12 @@
       "Q1 '25",
       "Q2 '25",
       "Q3 '25",
-      "Q4 '25"
+      "Q4 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 24,
+    "totalEngagements": 26,
     "engagements": [
       {
         "quarter": "Q4 '25",
@@ -692,6 +742,46 @@
         "stakeholders": "Mikkel Vogel, Natalia Lindqvist, Stefan García",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Co-develop extended follow-up protocol for Phase 4 registry",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Sofia Martínez",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Align on emerging real-world evidence from vosoritide long-term studies",
+        "channel": "- Round table",
+        "type": "- Round table",
+        "stakeholders": "Sofia Martínez",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Participate in cross-country panel on diagnostic benchmarking",
+        "channel": "- KOL roundtable",
+        "type": "- KOL roundtable",
+        "stakeholders": "Sofia Martínez",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Review interim Phase 4 data and discuss next engagement steps",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Sofia Martínez",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -838,21 +928,21 @@
     },
     "segmentHistory": [
       {
-        "quarter": "Q1 '23",
+        "quarter": "Q4 '20",
         "segment": "Quiet Champion"
       },
       {
-        "quarter": "Q2 '24",
+        "quarter": "Q1 '25",
         "segment": "Vocal Advocate"
       }
     ]
   },
   {
-    "name": "Laura Moreau",
+    "name": "Markus Weber",
     "tier": "ME",
     "focusArea": "ACH and HCH",
-    "institution": "Charité Berlin",
-    "specialty": "pediatric endocrinology",
+    "institution": "Heidelberg University Hospital",
+    "specialty": "Pediatric Endocrinology",
     "research": "Achondroplasie, Hypochondroplasia, NTS, AI/MRI-projects, RWE/registries, ACAN, AI-supported diagnostics, \r\nPAGs, Hyperinsulinemia,",
     "segment": "Vocal Advocate",
     "segmentMeta": {
@@ -878,10 +968,11 @@
       "Q2 '25",
       "Q3 '25",
       "Q4 '25",
-      "Q1 '26"
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 30,
+    "totalEngagements": 35,
     "engagements": [
       {
         "quarter": "Q4 '25",
@@ -1182,6 +1273,46 @@
         "stakeholders": "Astrid Szabo",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "National",
+        "objective": "Discuss upcoming trial site activation and scientific updates",
+        "channel": "- MSL field visit",
+        "type": "- MSL field visit",
+        "stakeholders": "Marta Lindqvist",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Present 3-year real-world outcomes data at ESPE annual congress",
+        "channel": "- Congress symposium",
+        "type": "- Congress symposium",
+        "stakeholders": "Marta Lindqvist",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "National",
+        "objective": "Host patient advocacy–HCP exchange on QoL outcomes in ACH",
+        "channel": "- Webinar host",
+        "type": "- Webinar host",
+        "stakeholders": "Marta Lindqvist",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Review and approve annual KOL engagement plan alignment",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Marta Lindqvist",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -1328,21 +1459,17 @@
     },
     "segmentHistory": [
       {
-        "quarter": "Q1 '23",
-        "segment": "Quiet Champion"
-      },
-      {
-        "quarter": "Q3 '24",
+        "quarter": "Q4 '20",
         "segment": "Vocal Advocate"
       }
     ]
   },
   {
-    "name": "Álvaro Kovács",
+    "name": "Julia Steiner",
     "tier": "ME",
     "focusArea": "ACH and HCH",
-    "institution": "Helsinki Univ. Hospital",
-    "specialty": "pediatric endocrinology and rheumatology",
+    "institution": "Univ. Medical Centre Hamburg-Eppendorf",
+    "specialty": "Pediatric Endocrinology",
     "research": "Achondroplasie, Hypochondroplasia, TS/SHOX/OI, muscle function, bone growth and  mineralization,  RW-outcomes and evidence, clinical trials, SCs and sport,  diagnostics,  multidisciplinary management",
     "segment": "Vocal Advocate",
     "segmentMeta": {
@@ -1368,10 +1495,11 @@
       "Q2 '25",
       "Q3 '25",
       "Q4 '25",
-      "Q1 '26"
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 28,
+    "totalEngagements": 31,
     "engagements": [
       {
         "quarter": "Q4 '25",
@@ -1652,6 +1780,46 @@
         "stakeholders": "Hanna Ricci, Marta De Vries",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Contribute to HCH/ACH treatment guidelines working group",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Marco Santos",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Advance dialogue on FGFR3 pathway data and clinical implications",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Marco Santos",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Finalize guidance document on off-label use and monitoring standards",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Marco Santos",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Oral presentation of treatment outcomes at ENDO 2026",
+        "channel": "- Congress presentation",
+        "type": "- Congress presentation",
+        "stakeholders": "Marco Santos",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -1795,20 +1963,26 @@
           "Mentions": 9
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Piotr Hoffman",
+    "name": "Stefan Müller",
     "tier": "Rising Star",
     "focusArea": "HCH",
-    "institution": "IEO Milan",
-    "specialty": "pediatric endocrinology ",
+    "institution": "University Hospital Düsseldorf",
+    "specialty": "Pediatric Endocrinology",
     "research": "HCH/ACH, NTS, Rare disease centers: patient journeys to  diagnostics and referral pathways  RW-data collection, COL2-mutations, ",
-    "segment": "Quiet Champion",
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": "low",
+      "vocality": "high",
       "belief": "high",
-      "objective": "Activate"
+      "objective": "Amplify"
     },
     "lead": "Stefan Lindqvist",
     "stakeholders": [
@@ -1827,10 +2001,12 @@
       "Q1 '25",
       "Q2 '25",
       "Q3 '25",
-      "Q4 '25"
+      "Q4 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 14,
+    "totalEngagements": 19,
     "engagements": [
       {
         "quarter": "Q4 '25",
@@ -1971,6 +2147,46 @@
         "stakeholders": "Romain Martínez, Sven Brandt",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Lead regional educational webinar on skeletal dysplasia management",
+        "channel": "- Webinar speaker",
+        "type": "- Webinar speaker",
+        "stakeholders": "Stefan Lindqvist",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Co-develop extended follow-up protocol for Phase 4 registry",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Stefan Lindqvist",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Lead authorship on consensus statement for HCH clinical criteria",
+        "channel": "- Publication authorship",
+        "type": "- Publication authorship",
+        "stakeholders": "Stefan Lindqvist",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Participate in cross-country panel on diagnostic benchmarking",
+        "channel": "- KOL roundtable",
+        "type": "- KOL roundtable",
+        "stakeholders": "Stefan Lindqvist",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -2114,14 +2330,24 @@
           "Mentions": 13
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Quiet Champion"
+      },
+      {
+        "quarter": "Q1 '26",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Astrid Szabo",
+    "name": "Lena Becker",
     "tier": "Rising Star",
     "focusArea": "ACH",
-    "institution": "TU Munich MRI",
-    "specialty": "pediatrics ",
+    "institution": "Goethe University Hospital Frankfurt",
+    "specialty": "Pediatrics",
     "research": "Achondroplasia,  muscle function, bone growth,  RW-outcomes and evidence generation, clinical trials and registries",
     "segment": "Quiet Champion",
     "segmentMeta": {
@@ -2146,10 +2372,12 @@
       "Q1 '25",
       "Q2 '25",
       "Q3 '25",
-      "Q4 '25"
+      "Q4 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 18,
+    "totalEngagements": 23,
     "engagements": [
       {
         "quarter": "Q4 '25",
@@ -2330,6 +2558,46 @@
         "stakeholders": "Elena Brandt",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Collaborative review of manuscript on ACH natural history",
+        "channel": "- Publication support",
+        "type": "- Publication support",
+        "stakeholders": "Alicia Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "National",
+        "objective": "Discuss upcoming trial site activation and scientific updates",
+        "channel": "- MSL field visit",
+        "type": "- MSL field visit",
+        "stakeholders": "Alicia Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Share updated data package and gather insights on treatment barriers",
+        "channel": "- MSL scientific exchange",
+        "type": "- MSL scientific exchange",
+        "stakeholders": "Alicia Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "National",
+        "objective": "Host patient advocacy–HCP exchange on QoL outcomes in ACH",
+        "channel": "- Webinar host",
+        "type": "- Webinar host",
+        "stakeholders": "Alicia Kowalski",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -2473,20 +2741,26 @@
           "Mentions": 29
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Quiet Champion"
+      }
+    ]
   },
   {
-    "name": "Sven Johansson",
+    "name": "Hiroshi Tanaka",
     "tier": "Rising Star",
     "focusArea": "ACH",
-    "institution": "Karolinska Stockholm",
-    "specialty": "pediatric orthopedist",
+    "institution": "Tokyo Medical University Hospital",
+    "specialty": "Orthopedics",
     "research": "Limb correction and lengthening in ACH (and HCH), bone deformities in ACH, special expertise: Humeri  lengthening; changes and considerations caused by new treatment option: in  multidisciplinary approach in orthopedics in the future,  ",
-    "segment": "Quiet Champion",
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": "low",
+      "vocality": "high",
       "belief": "high",
-      "objective": "Activate"
+      "objective": "Amplify"
     },
     "lead": "Jörg Puig",
     "stakeholders": [
@@ -2505,10 +2779,12 @@
       "Q1 '25",
       "Q2 '25",
       "Q3 '25",
-      "Q4 '25"
+      "Q4 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 19,
+    "totalEngagements": 24,
     "engagements": [
       {
         "quarter": "Q4 '25",
@@ -2699,6 +2975,46 @@
         "stakeholders": "Céline Girard, Claire Björk",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Align on emerging real-world evidence from vosoritide long-term studies",
+        "channel": "- Round table",
+        "type": "- Round table",
+        "stakeholders": "Jörg Puig",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Contribute to HCH/ACH treatment guidelines working group",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Jörg Puig",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Review interim Phase 4 data and discuss next engagement steps",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Jörg Puig",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Finalize guidance document on off-label use and monitoring standards",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Jörg Puig",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -2842,20 +3158,34 @@
           "Mentions": 15
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q2 '24",
+        "segment": "Quiet Champion"
+      },
+      {
+        "quarter": "Q1 '26",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Thomas Martínez",
+    "name": "Keiko Yamamoto",
     "tier": "ME",
     "focusArea": "HCH",
-    "institution": "Gemelli Rome",
-    "specialty": "Pediatrics & Pediatric Endocrinology",
+    "institution": "Keio University Hospital, Tokyo",
+    "specialty": "Pediatric Endocrinology",
     "research": "XLH & Burosumab: Pediatric treatment and growth outcomes\r\nAchondroplasia & Vosoritide: Therapy transitions and efficacy\r\nPediatric Nephrology & Endocrinology: Kidney, metabolic, and growth disorders\r\nClinical trial leadership: PI/Sub-I in Phase 3 studies",
-    "segment": "Quiet Champion",
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": "low",
+      "vocality": "high",
       "belief": "high",
-      "objective": "Activate"
+      "objective": "Amplify"
     },
     "lead": "Claire Martínez",
     "stakeholders": [
@@ -2873,10 +3203,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 16,
+    "totalEngagements": 18,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -3037,6 +3369,46 @@
         "stakeholders": "Henrik Nielsen, Claire Girard, Marie García, Annika Kovács",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Present 3-year real-world outcomes data at ESPE annual congress",
+        "channel": "- Congress symposium",
+        "type": "- Congress symposium",
+        "stakeholders": "Claire Martínez",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Lead regional educational webinar on skeletal dysplasia management",
+        "channel": "- Webinar speaker",
+        "type": "- Webinar speaker",
+        "stakeholders": "Claire Martínez",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Review and approve annual KOL engagement plan alignment",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Claire Martínez",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Lead authorship on consensus statement for HCH clinical criteria",
+        "channel": "- Publication authorship",
+        "type": "- Publication authorship",
+        "stakeholders": "Claire Martínez",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "One case identified as an eligible patient for the 212 clinical study. Interaction egarding the disease definition of HCH and engagement with diagnostic guidelines. Follow-up on the progress of the International HCH Guideline vote and the development of the Japanese HCH diagnostic guide. Review of the presentation content on the use of VOX in ACH cases at ASBMR. Interaction regarding XLH at the Japanese Society for Bone and Mineral Research.",
@@ -3180,20 +3552,30 @@
           "Mentions": 17
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Quiet Champion"
+      },
+      {
+        "quarter": "Q2 '26",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Lukas Papadopoulos",
+    "name": "Masato Nakamura",
     "tier": "ME",
     "focusArea": "HCH",
-    "institution": "Hospital Clínic Barcelona",
-    "specialty": "Pediatrics & Pediatric Endocrinology",
+    "institution": "Osaka University Hospital",
+    "specialty": "Pediatric Endocrinology",
     "research": "Skeletal dysplasia, rickets, and osteomalacia\r\nBone and mineral metabolism, pediatric endocrinology\r\nClinical trials in achondroplasia (ACH) and hypochondroplasia (HCH)\r\nClinical trial leadership: PI in Phase 3 studies",
-    "segment": "Quiet Champion",
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": "low",
+      "vocality": "high",
       "belief": "high",
-      "objective": "Activate"
+      "objective": "Amplify"
     },
     "lead": "Henrik Hoffman",
     "stakeholders": [
@@ -3211,10 +3593,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 22,
+    "totalEngagements": 28,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -3435,6 +3819,46 @@
         "stakeholders": "Mikkel Lefebvre, Luca Dupont",
         "count": 0,
         "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Advance dialogue on FGFR3 pathway data and clinical implications",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Henrik Hoffman",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Collaborative review of manuscript on ACH natural history",
+        "channel": "- Publication support",
+        "type": "- Publication support",
+        "stakeholders": "Henrik Hoffman",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Oral presentation of treatment outcomes at ENDO 2026",
+        "channel": "- Congress presentation",
+        "type": "- Congress presentation",
+        "stakeholders": "Henrik Hoffman",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Share updated data package and gather insights on treatment barriers",
+        "channel": "- MSL scientific exchange",
+        "type": "- MSL scientific exchange",
+        "stakeholders": "Henrik Hoffman",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "One case identified as an eligible patient for the 212 clinical study. Interaction regarding the definition of HCH as a disease, interaction concerning the diagnostic guidelines, follow-up on the progress of the International HCH Guideline vote, and follow-up on the development of the Japanese HCH diagnostic guide.",
@@ -3578,13 +4002,27 @@
           "Mentions": 29
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q3 '24",
+        "segment": "Quiet Champion"
+      },
+      {
+        "quarter": "Q2 '26",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Annika Lindqvist",
+    "name": "Yuki Sato",
     "tier": "Rising Star",
     "focusArea": "HCH",
-    "institution": "IEO Milan",
+    "institution": "Nagoya University Hospital",
     "specialty": "Pediatrics",
     "research": "Skeletal dysplasia & hypochondroplasia: neonatal screening and early treatment\r\nAchondroplasia: clinical trial feasibility and drug comparison\r\nPediatric endocrinology: growth disorders and metabolic diseases\r\nClinical trial leadership: PI in Phase 3 studie of 212",
     "segment": "Quiet Champion",
@@ -3609,10 +4047,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 17,
+    "totalEngagements": 20,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -3783,6 +4223,46 @@
         "stakeholders": "Sofia Nielsen",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Co-develop extended follow-up protocol for Phase 4 registry",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Jan Okafor",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Align on emerging real-world evidence from vosoritide long-term studies",
+        "channel": "- Round table",
+        "type": "- Round table",
+        "stakeholders": "Jan Okafor",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Participate in cross-country panel on diagnostic benchmarking",
+        "channel": "- KOL roundtable",
+        "type": "- KOL roundtable",
+        "stakeholders": "Jan Okafor",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Review interim Phase 4 data and discuss next engagement steps",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Jan Okafor",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "One case identified as an eligible patient for the 212 clinical study. Interaction regarding the definition of HCH as a disease.",
@@ -3926,13 +4406,23 @@
           "Mentions": 25
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q1 '25",
+        "segment": "Quiet Champion"
+      }
+    ]
   },
   {
-    "name": "Romain Rossi",
+    "name": "Takeshi Kobayashi",
     "tier": "Rising Star",
     "focusArea": "HCH",
-    "institution": "Erasmus MC Rotterdam",
+    "institution": "Kyoto University Hospital",
     "specialty": "Pediatrics",
     "research": "Hypochondroplasia & Achondroplasia: Pediatric clinical trials on vosoritide\r\nPediatric endocrinology: Growth disorders and metabolic diseases\r\nClinical trial leadership: PI/Sub-I in Phase 3 studies",
     "segment": "Quiet Champion",
@@ -3957,10 +4447,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 17,
+    "totalEngagements": 22,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -4131,6 +4623,46 @@
         "stakeholders": "Elena Rossi, Erik Schmidt, Lukas Ricci",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "National",
+        "objective": "Discuss upcoming trial site activation and scientific updates",
+        "channel": "- MSL field visit",
+        "type": "- MSL field visit",
+        "stakeholders": "Carlos Lombardi",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Present 3-year real-world outcomes data at ESPE annual congress",
+        "channel": "- Congress symposium",
+        "type": "- Congress symposium",
+        "stakeholders": "Carlos Lombardi",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "National",
+        "objective": "Host patient advocacy–HCP exchange on QoL outcomes in ACH",
+        "channel": "- Webinar host",
+        "type": "- Webinar host",
+        "stakeholders": "Carlos Lombardi",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Review and approve annual KOL engagement plan alignment",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Carlos Lombardi",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "One case identified as an eligible patient for the 212 clinical study. Interaction regarding the definition of HCH as a disease and engagement with the diagnostic guidelines.",
@@ -4274,20 +4806,30 @@
           "Mentions": 31
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q2 '24",
+        "segment": "Quiet Champion"
+      }
+    ]
   },
   {
-    "name": "Hanna Leclercq",
+    "name": "Marco Ferretti",
     "tier": "ME",
     "focusArea": "ACH and HCH",
-    "institution": "ZOL Genk",
-    "specialty": "Ped Endo",
+    "institution": "Bambino Gesù Children's Hospital, Rome",
+    "specialty": "Pediatric Endocrinology",
     "research": "Genetic skeletal condition, Vox outcomes beyond the height\r\nBone quality, muscle strenght, neulogical and ortopedics comorbiditeies  managementClinical trials in achondroplasia (ACH) and hypochondroplasia (HCH), NST and ISS\r\nQuality of life studies in skeletal disorders",
-    "segment": "Vocal Advocate",
+    "segment": "Cautious Skeptic",
     "segmentMeta": {
-      "vocality": "high",
-      "belief": "high",
-      "objective": "Amplify"
+      "vocality": "low",
+      "belief": "low",
+      "objective": "Strengthen"
     },
     "lead": "Mikkel Björk",
     "stakeholders": [
@@ -4306,7 +4848,9 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
     "totalEngagements": 20,
@@ -4510,6 +5054,26 @@
         "stakeholders": "Maja García, Astrid Hoffman, Maja Schmidt",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Contribute to HCH/ACH treatment guidelines working group",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Mikkel Björk",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Finalize guidance document on off-label use and monitoring standards",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Mikkel Björk",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -4656,27 +5220,23 @@
     },
     "segmentHistory": [
       {
-        "quarter": "Q1 '23",
-        "segment": "Quiet Champion"
-      },
-      {
-        "quarter": "Q2 '24",
-        "segment": "Vocal Advocate"
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
       }
     ]
   },
   {
-    "name": "Hanna García",
+    "name": "Francesca Bianchi",
     "tier": "ME",
     "focusArea": "ACH and HCH",
-    "institution": "UFZ Leipzig",
-    "specialty": "Ped Endo",
+    "institution": "IRCCS San Raffaele Hospital, Milan",
+    "specialty": "Pediatric Endocrinology",
     "research": "Genetic skeletal condition, Vox outcomes beyond the height\r\nBone quality, muscle strenght, neulogical and ortopedics comorbiditeies  managementClinical trials in achondroplasia (ACH) and hypochondroplasia (HCH), NST and ISS\r\nQuality of life studies in skeletal disorders",
-    "segment": "Vocal Advocate",
+    "segment": "Unconvinced Leader",
     "segmentMeta": {
       "vocality": "high",
-      "belief": "high",
-      "objective": "Amplify"
+      "belief": "low",
+      "objective": "Realign"
     },
     "lead": "Olivier Hoffman",
     "stakeholders": [
@@ -4695,10 +5255,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
-    "plannedThisQuarter": true,
-    "totalEngagements": 21,
+    "plannedThisQuarter": false,
+    "totalEngagements": 22,
     "engagements": [
       {
         "quarter": "Q4 '20",
@@ -4909,6 +5471,26 @@
         "stakeholders": "Mikkel Kowalski, Hanna Ricci",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Lead regional educational webinar on skeletal dysplasia management",
+        "channel": "- Webinar speaker",
+        "type": "- Webinar speaker",
+        "stakeholders": "Olivier Hoffman",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Lead authorship on consensus statement for HCH clinical criteria",
+        "channel": "- Publication authorship",
+        "type": "- Publication authorship",
+        "stakeholders": "Olivier Hoffman",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -5055,27 +5637,23 @@
     },
     "segmentHistory": [
       {
-        "quarter": "Q1 '23",
-        "segment": "Quiet Champion"
-      },
-      {
-        "quarter": "Q1 '24",
-        "segment": "Vocal Advocate"
+        "quarter": "Q4 '20",
+        "segment": "Unconvinced Leader"
       }
     ]
   },
   {
-    "name": "Marie Weiss",
+    "name": "Luca Esposito",
     "tier": "ME",
     "focusArea": "ACH and HCH",
-    "institution": "IEO Milan",
-    "specialty": "Ped Endo",
+    "institution": "Meyer Children's Hospital, Florence",
+    "specialty": "Pediatric Endocrinology",
     "research": "Genetic skeletal condition, Vox outcomes beyond the height\r\nBone quality, muscle strenght, neulogical and ortopedics comorbiditeies  managementClinical trials in achondroplasia (ACH) and hypochondroplasia (HCH), NST and ISS\r\nQuality of life studies in skeletal disorders",
-    "segment": "Vocal Advocate",
+    "segment": "Cautious Skeptic",
     "segmentMeta": {
-      "vocality": "high",
-      "belief": "high",
-      "objective": "Amplify"
+      "vocality": "low",
+      "belief": "low",
+      "objective": "Strengthen"
     },
     "lead": "Piotr Brandt",
     "stakeholders": [
@@ -5094,10 +5672,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 22,
+    "totalEngagements": 23,
     "engagements": [
       {
         "quarter": "Q4 '20",
@@ -5318,6 +5898,26 @@
         "stakeholders": "Isabelle Eriksson, Maja Okafor, Claire Moreau",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Collaborative review of manuscript on ACH natural history",
+        "channel": "- Publication support",
+        "type": "- Publication support",
+        "stakeholders": "Piotr Brandt",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Share updated data package and gather insights on treatment barriers",
+        "channel": "- MSL scientific exchange",
+        "type": "- MSL scientific exchange",
+        "stakeholders": "Piotr Brandt",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -5464,27 +6064,23 @@
     },
     "segmentHistory": [
       {
-        "quarter": "Q1 '23",
-        "segment": "Quiet Champion"
-      },
-      {
-        "quarter": "Q1 '25",
-        "segment": "Vocal Advocate"
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
       }
     ]
   },
   {
-    "name": "Sven Lindqvist",
+    "name": "Elena Romano",
     "tier": "Rising Star",
     "focusArea": "ACH and HCH",
-    "institution": "ICO Barcelona",
-    "specialty": "Ped Endo",
+    "institution": "Regina Margherita Children's Hospital, Turin",
+    "specialty": "Pediatric Endocrinology",
     "research": "Genetic skeletal condition, Vox outcomes beyond the height\r\nBone quality, muscle strenght, neulogical and ortopedics comorbiditeies  managementClinical trials in achondroplasia (ACH) and hypochondroplasia (HCH), NST and ISS\r\nQuality of life studies in skeletal disorders",
-    "segment": null,
+    "segment": "Quiet Champion",
     "segmentMeta": {
-      "vocality": null,
-      "belief": null,
-      "objective": null
+      "vocality": "low",
+      "belief": "high",
+      "objective": "Activate"
     },
     "lead": "Isabelle Lefebvre",
     "stakeholders": [
@@ -5503,10 +6099,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 18,
+    "totalEngagements": 20,
     "engagements": [
       {
         "quarter": "Q4 '20",
@@ -5687,6 +6285,46 @@
         "stakeholders": "Mikkel Dupont, Patrick Sørensen, Anna Bonnet",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Align on emerging real-world evidence from vosoritide long-term studies",
+        "channel": "- Round table",
+        "type": "- Round table",
+        "stakeholders": "Isabelle Lefebvre",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Contribute to HCH/ACH treatment guidelines working group",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Isabelle Lefebvre",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Review interim Phase 4 data and discuss next engagement steps",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Isabelle Lefebvre",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Finalize guidance document on off-label use and monitoring standards",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Isabelle Lefebvre",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -5830,20 +6468,30 @@
           "Mentions": 9
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q3 '24",
+        "segment": "Quiet Champion"
+      }
+    ]
   },
   {
-    "name": "Ingrid Rossi",
+    "name": "Giovanni De Luca",
     "tier": "Rising Star",
     "focusArea": "ACH",
-    "institution": "Charité Berlin",
-    "specialty": "Ped Endo",
+    "institution": "University of Naples Federico II",
+    "specialty": "Pediatric Endocrinology",
     "research": "Genetic skeletal condition, Vox outcomes beyond the height\r\nBone quality, muscle strenght, neulogical and ortopedics comorbiditeies  managementClinical trials in achondroplasia (ACH) and hypochondroplasia (HCH), NST and ISS\r\nQuality of life studies in skeletal disorders",
-    "segment": null,
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": null,
-      "belief": null,
-      "objective": null
+      "vocality": "high",
+      "belief": "high",
+      "objective": "Amplify"
     },
     "lead": "Maja Vogel",
     "stakeholders": [
@@ -5862,10 +6510,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 17,
+    "totalEngagements": 21,
     "engagements": [
       {
         "quarter": "Q4 '20",
@@ -6036,6 +6686,26 @@
         "stakeholders": "Hanna Bianchi, Marco Schmidt",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Present 3-year real-world outcomes data at ESPE annual congress",
+        "channel": "- Congress symposium",
+        "type": "- Congress symposium",
+        "stakeholders": "Maja Vogel",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Review and approve annual KOL engagement plan alignment",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Maja Vogel",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -6179,20 +6849,30 @@
           "Mentions": 31
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Unconvinced Leader"
+      },
+      {
+        "quarter": "Q1 '26",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Hanna Dupont",
+    "name": "Akiko Ito",
     "tier": "Rising Star",
     "focusArea": "HCH",
-    "institution": "ZOL Genk",
-    "specialty": "Ped Endo",
+    "institution": "Natl. Center for Child Health, Tokyo",
+    "specialty": "Pediatric Endocrinology",
     "research": "Genetic skeletal condition, Vox outcomes beyond the height\r\nBone quality, muscle strenght, neulogical and ortopedics comorbiditeies  managementClinical trials in achondroplasia (ACH) and hypochondroplasia (HCH), NST and ISS\r\nQuality of life studies in skeletal disorders",
-    "segment": null,
+    "segment": "Cautious Skeptic",
     "segmentMeta": {
-      "vocality": null,
-      "belief": null,
-      "objective": null
+      "vocality": "low",
+      "belief": "low",
+      "objective": "Strengthen"
     },
     "lead": "Marta Lombardi",
     "stakeholders": [
@@ -6211,10 +6891,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 20,
+    "totalEngagements": 21,
     "engagements": [
       {
         "quarter": "Q4 '20",
@@ -6415,6 +7097,26 @@
         "stakeholders": "Sven Bonnet, Valentina Nielsen",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Advance dialogue on FGFR3 pathway data and clinical implications",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Marta Lombardi",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Oral presentation of treatment outcomes at ENDO 2026",
+        "channel": "- Congress presentation",
+        "type": "- Congress presentation",
+        "stakeholders": "Marta Lombardi",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -6558,20 +7260,26 @@
           "Mentions": 17
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      }
+    ]
   },
   {
-    "name": "Léa Kovács",
+    "name": "Ryoji Kato",
     "tier": "ME",
     "focusArea": "ACH and HCH",
-    "institution": "Univ. Hospital Zurich",
-    "specialty": "Orthopedics & Plastic Surgery",
+    "institution": "Juntendo University Hospital, Tokyo",
+    "specialty": "Orthopedics",
     "research": "Skeletal dysplasia, rickets, and osteomalacia\r\nBone and mineral metabolism, pediatric endocrinology\r\nEndochondral ossification and bone regeneration\r\nClinical trials in achondroplasia (ACH) and hypochondroplasia (HCH)\r\nQuality of life studies in skeletal disorders",
-    "segment": "Quiet Champion",
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": "low",
+      "vocality": "high",
       "belief": "high",
-      "objective": "Activate"
+      "objective": "Amplify"
     },
     "lead": "Maja Fernández",
     "stakeholders": [
@@ -6589,10 +7297,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 19,
+    "totalEngagements": 25,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -6783,6 +7493,46 @@
         "stakeholders": "Alicia Szabo, Freya Müller",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Co-develop extended follow-up protocol for Phase 4 registry",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Maja Fernández",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Align on emerging real-world evidence from vosoritide long-term studies",
+        "channel": "- Round table",
+        "type": "- Round table",
+        "stakeholders": "Maja Fernández",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Participate in cross-country panel on diagnostic benchmarking",
+        "channel": "- KOL roundtable",
+        "type": "- KOL roundtable",
+        "stakeholders": "Maja Fernández",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Review interim Phase 4 data and discuss next engagement steps",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Maja Fernández",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "Interaction regarding the definition of HCH as a disease ",
@@ -6926,14 +7676,28 @@
           "Mentions": 11
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q1 '25",
+        "segment": "Quiet Champion"
+      },
+      {
+        "quarter": "Q2 '26",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Katrin Björk",
+    "name": "Naomi Yoshida",
     "tier": "ME",
     "focusArea": "ACH and HCH",
-    "institution": "Uppsala Univ. Hospital",
-    "specialty": "Orthopedics & Plastic Surgery",
+    "institution": "Shizuoka Children's Hospital",
+    "specialty": "Orthopedics",
     "research": "Achondroplasia and Hypochondroplasia\r\nPediatric skeletal disorders\r\nInternational scientific collaboration and forums",
     "segment": "Quiet Champion",
     "segmentMeta": {
@@ -6957,10 +7721,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 16,
+    "totalEngagements": 19,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -7121,6 +7887,46 @@
         "stakeholders": "Luca Andersen, Léa García",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "National",
+        "objective": "Discuss upcoming trial site activation and scientific updates",
+        "channel": "- MSL field visit",
+        "type": "- MSL field visit",
+        "stakeholders": "Carlos Santos",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Present 3-year real-world outcomes data at ESPE annual congress",
+        "channel": "- Congress symposium",
+        "type": "- Congress symposium",
+        "stakeholders": "Carlos Santos",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "National",
+        "objective": "Host patient advocacy–HCP exchange on QoL outcomes in ACH",
+        "channel": "- Webinar host",
+        "type": "- Webinar host",
+        "stakeholders": "Carlos Santos",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Review and approve annual KOL engagement plan alignment",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Carlos Santos",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "Interaction regarding the definition of HCH as a disease ",
@@ -7264,14 +8070,20 @@
           "Mentions": 9
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Quiet Champion"
+      }
+    ]
   },
   {
-    "name": "Stefan Szabo",
+    "name": "Daisuke Watanabe",
     "tier": "ME",
     "focusArea": "ACH and HCH",
-    "institution": "Charité Berlin",
-    "specialty": "Pediatrics & Pediatric Endocrinology",
+    "institution": "Kyushu University Hospital, Fukuoka",
+    "specialty": "Pediatric Endocrinology",
     "research": "Pediatric gastrointestinal surgery\r\nEndoscopic procedures\r\nPancreatic cancer pathology\r\nClinical case reporting\r\nSurgical innovation and technique development\r\nClinical trial leadership: PI in Phase 3 studies",
     "segment": "Quiet Champion",
     "segmentMeta": {
@@ -7295,10 +8107,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 14,
+    "totalEngagements": 20,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -7439,6 +8253,46 @@
         "stakeholders": "Piotr García",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Contribute to HCH/ACH treatment guidelines working group",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Astrid Ricci",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Advance dialogue on FGFR3 pathway data and clinical implications",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Astrid Ricci",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Finalize guidance document on off-label use and monitoring standards",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Astrid Ricci",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Oral presentation of treatment outcomes at ENDO 2026",
+        "channel": "- Congress presentation",
+        "type": "- Congress presentation",
+        "stakeholders": "Astrid Ricci",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "One case identified as an eligible patient for the 212 clinical study. Interaction regarding the definition of HCH as a disease",
@@ -7582,13 +8436,23 @@
           "Mentions": 8
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q1 '24",
+        "segment": "Quiet Champion"
+      }
+    ]
   },
   {
-    "name": "Sofia Van den Berg",
+    "name": "Fumiko Suzuki",
     "tier": "Rising Star",
     "focusArea": "ACH and HCH",
-    "institution": "TU Munich MRI",
+    "institution": "Tokyo Metropolitan Children's Medical Center",
     "specialty": "Pediatrics",
     "research": "Pediatric endocrinology and growth disorders\r\nSkeletal dysplasia and congenital bone diseases\r\nClinical trials in achondroplasia and hypochondroplasia\r\nMolecular genetics and FGFR3-related pathophysiology\r\nEarly diagnosis and therapeutic evaluation in pediatric rare diseases",
     "segment": "Quiet Champion",
@@ -7613,10 +8477,12 @@
       "Q4'24",
       "Q1'25",
       "Q2'25",
-      "Q3'25"
+      "Q3'25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 15,
+    "totalEngagements": 21,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -7767,6 +8633,46 @@
         "stakeholders": "Thomas Schmidt",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Lead regional educational webinar on skeletal dysplasia management",
+        "channel": "- Webinar speaker",
+        "type": "- Webinar speaker",
+        "stakeholders": "Fabio Szabo",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Co-develop extended follow-up protocol for Phase 4 registry",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Fabio Szabo",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Lead authorship on consensus statement for HCH clinical criteria",
+        "channel": "- Publication authorship",
+        "type": "- Publication authorship",
+        "stakeholders": "Fabio Szabo",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Participate in cross-country panel on diagnostic benchmarking",
+        "channel": "- KOL roundtable",
+        "type": "- KOL roundtable",
+        "stakeholders": "Fabio Szabo",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "Interaction regarding the definition of HCH as a disease ",
@@ -7910,20 +8816,30 @@
           "Mentions": 5
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q1 '25",
+        "segment": "Quiet Champion"
+      }
+    ]
   },
   {
-    "name": "Jörg Björk",
+    "name": "Satoshi Hayashi",
     "tier": "Rising Star",
     "focusArea": "HCH",
-    "institution": "MRI Munich",
+    "institution": "Tohoku University Hospital, Sendai",
     "specialty": "Other",
     "research": "Pediatric orthopedic surgery\r\nRare skeletal disorders in children\r\nClinical trial leadership: PI in Phase 3 studies",
-    "segment": "Quiet Champion",
+    "segment": "Unconvinced Leader",
     "segmentMeta": {
-      "vocality": "low",
-      "belief": "high",
-      "objective": "Activate"
+      "vocality": "high",
+      "belief": "low",
+      "objective": "Realign"
     },
     "lead": "Erik Bianchi",
     "stakeholders": [
@@ -7941,10 +8857,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
-    "plannedThisQuarter": true,
-    "totalEngagements": 14,
+    "plannedThisQuarter": false,
+    "totalEngagements": 17,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -8083,6 +9001,26 @@
         "channel": "- Webinar speaker",
         "type": "- Webinar \"Advances in ACH/HCH management\"",
         "stakeholders": "Natalia Björk",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Collaborative review of manuscript on ACH natural history",
+        "channel": "- Publication support",
+        "type": "- Publication support",
+        "stakeholders": "Erik Bianchi",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Share updated data package and gather insights on treatment barriers",
+        "channel": "- MSL scientific exchange",
+        "type": "- MSL scientific exchange",
+        "stakeholders": "Erik Bianchi",
         "count": 0,
         "planned": true
       }
@@ -8228,13 +9166,19 @@
           "Mentions": 13
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Unconvinced Leader"
+      }
+    ]
   },
   {
-    "name": "Maja Martínez",
+    "name": "Michiko Yamada",
     "tier": "Rising Star",
     "focusArea": "HCH",
-    "institution": "DKFZ Heidelberg",
+    "institution": "Chiba University Hospital",
     "specialty": "Pediatrics",
     "research": "Achondroplasia (ACH) and Hypochondroplasia (HCH)\r\nVosoritide treatment: early intervention, physical function, and socioeconomic impact\r\nCombination therapies: Vosoritide + GH, limb-lengthening\r\nFGFR3 pathway: non-skeletal effects (e.g. obesity, cardiovascular)\r\nDiagnosis standards: supports genetic testing and global criteria (Nosology, GeneReviews)",
     "segment": "Quiet Champion",
@@ -8259,10 +9203,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 16,
+    "totalEngagements": 21,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -8423,6 +9369,46 @@
         "stakeholders": "Nadia Lefebvre, Mikkel Ricci, Laura Bianchi",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Align on emerging real-world evidence from vosoritide long-term studies",
+        "channel": "- Round table",
+        "type": "- Round table",
+        "stakeholders": "Jan Kovács",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Contribute to HCH/ACH treatment guidelines working group",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Jan Kovács",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Review interim Phase 4 data and discuss next engagement steps",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Jan Kovács",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Finalize guidance document on off-label use and monitoring standards",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Jan Kovács",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "Interaction regarding the definition of HCH as a disease ",
@@ -8566,13 +9552,23 @@
           "Mentions": 21
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Cautious Skeptic"
+      },
+      {
+        "quarter": "Q2 '25",
+        "segment": "Quiet Champion"
+      }
+    ]
   },
   {
-    "name": "Riccardo Kovács",
+    "name": "Taro Nakagawa",
     "tier": "ME",
     "focusArea": "ACH",
-    "institution": "AP-HP Paris",
+    "institution": "Osaka City General Hospital",
     "specialty": "Pediatrics",
     "research": "rickets, hypophosphatasia, osteomalacia, familial hypophosphatemic rickets, hypophosphatemia",
     "segment": "Vocal Advocate",
@@ -8597,10 +9593,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 20,
+    "totalEngagements": 24,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -8801,6 +9799,46 @@
         "stakeholders": "Andreas Björk",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Present 3-year real-world outcomes data at ESPE annual congress",
+        "channel": "- Congress symposium",
+        "type": "- Congress symposium",
+        "stakeholders": "Riccardo Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Lead regional educational webinar on skeletal dysplasia management",
+        "channel": "- Webinar speaker",
+        "type": "- Webinar speaker",
+        "stakeholders": "Riccardo Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Review and approve annual KOL engagement plan alignment",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Riccardo Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Lead authorship on consensus statement for HCH clinical criteria",
+        "channel": "- Publication authorship",
+        "type": "- Publication authorship",
+        "stakeholders": "Riccardo Kowalski",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -8947,20 +9985,16 @@
     },
     "segmentHistory": [
       {
-        "quarter": "Q1 '23",
-        "segment": "Quiet Champion"
-      },
-      {
-        "quarter": "Q4 '24",
+        "quarter": "Q4 '20",
         "segment": "Vocal Advocate"
       }
     ]
   },
   {
-    "name": "Mikkel Santos",
+    "name": "Yuko Inoue",
     "tier": "ME",
     "focusArea": "ACH",
-    "institution": "TU Munich MRI",
+    "institution": "Hokkaido University Hospital, Sapporo",
     "specialty": "Pediatrics",
     "research": "hypophosphatasia, achondroplasia, dwarfism, osteogenesis imperfecta, rickets",
     "segment": "Vocal Advocate",
@@ -8985,10 +10019,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 20,
+    "totalEngagements": 24,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -9189,6 +10225,46 @@
         "stakeholders": "Henrik Rossi",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Advance dialogue on FGFR3 pathway data and clinical implications",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Natalia Brandt",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Collaborative review of manuscript on ACH natural history",
+        "channel": "- Publication support",
+        "type": "- Publication support",
+        "stakeholders": "Natalia Brandt",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Oral presentation of treatment outcomes at ENDO 2026",
+        "channel": "- Congress presentation",
+        "type": "- Congress presentation",
+        "stakeholders": "Natalia Brandt",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Share updated data package and gather insights on treatment barriers",
+        "channel": "- MSL scientific exchange",
+        "type": "- MSL scientific exchange",
+        "stakeholders": "Natalia Brandt",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -9332,20 +10408,30 @@
           "Mentions": 27
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Quiet Champion"
+      },
+      {
+        "quarter": "Q2 '25",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Luca Puig",
+    "name": "Kazuo Shimizu",
     "tier": "Rising Star",
     "focusArea": "ACH",
-    "institution": "Charité Berlin",
+    "institution": "Kobe University Hospital",
     "specialty": "Other",
     "research": "Conjunctival neoplasms, neovascularization, pathologic, diabetic retinopathy, pterygium, retinitis",
-    "segment": "Quiet Champion",
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": "low",
+      "vocality": "high",
       "belief": "high",
-      "objective": "Activate"
+      "objective": "Amplify"
     },
     "lead": "Katrin Nielsen",
     "stakeholders": [
@@ -9363,10 +10449,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 15,
+    "totalEngagements": 19,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -9517,6 +10605,46 @@
         "stakeholders": "Fabio Sørensen",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Co-develop extended follow-up protocol for Phase 4 registry",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Katrin Nielsen",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Align on emerging real-world evidence from vosoritide long-term studies",
+        "channel": "- Round table",
+        "type": "- Round table",
+        "stakeholders": "Katrin Nielsen",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Participate in cross-country panel on diagnostic benchmarking",
+        "channel": "- KOL roundtable",
+        "type": "- KOL roundtable",
+        "stakeholders": "Katrin Nielsen",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Regional",
+        "objective": "Review interim Phase 4 data and discuss next engagement steps",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Katrin Nielsen",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -9660,20 +10788,34 @@
           "Mentions": 5
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Unconvinced Leader"
+      },
+      {
+        "quarter": "Q2 '25",
+        "segment": "Quiet Champion"
+      },
+      {
+        "quarter": "Q2 '26",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Nadia Björk",
+    "name": "Noriko Ogawa",
     "tier": "Rising Star",
     "focusArea": "ACH",
-    "institution": "Univ. Hospital Zurich",
+    "institution": "Saitama Children's Medical Center",
     "specialty": "Other",
     "research": "Conjunctival neoplasms, neovascularization, pathologic, diabetic retinopathy, pterygium, retinitis",
-    "segment": "Quiet Champion",
+    "segment": "Unconvinced Leader",
     "segmentMeta": {
-      "vocality": "low",
-      "belief": "high",
-      "objective": "Activate"
+      "vocality": "high",
+      "belief": "low",
+      "objective": "Realign"
     },
     "lead": "Luca Bonnet",
     "stakeholders": [
@@ -9691,10 +10833,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 15,
+    "totalEngagements": 17,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -9845,6 +10989,26 @@
         "stakeholders": "Léa Rossi, Sofia Bonnet, Laura De Vries, Marta Rossi",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "National",
+        "objective": "Discuss upcoming trial site activation and scientific updates",
+        "channel": "- MSL field visit",
+        "type": "- MSL field visit",
+        "stakeholders": "Luca Bonnet",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "National",
+        "objective": "Host patient advocacy–HCP exchange on QoL outcomes in ACH",
+        "channel": "- Webinar host",
+        "type": "- Webinar host",
+        "stakeholders": "Luca Bonnet",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -9988,20 +11152,26 @@
           "Mentions": 21
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Unconvinced Leader"
+      }
+    ]
   },
   {
-    "name": "Sofia Novak",
+    "name": "Haruki Matsumoto",
     "tier": "Rising Star",
     "focusArea": "ACH",
-    "institution": "Leiden UMC",
+    "institution": "Nara Medical University Hospital",
     "specialty": "Pediatrics",
     "research": "Pediatric Endocrinology: achondroplasia, osteogenesis imperfecta, hypophosphatasia, and X-linked hypophosphatemic rickets. ",
-    "segment": "Quiet Champion",
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": "low",
+      "vocality": "high",
       "belief": "high",
-      "objective": "Activate"
+      "objective": "Amplify"
     },
     "lead": "Stefan Kowalski",
     "stakeholders": [
@@ -10019,10 +11189,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 16,
+    "totalEngagements": 20,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -10183,6 +11355,46 @@
         "stakeholders": "Andreas Girard",
         "count": 2,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "European",
+        "objective": "Contribute to HCH/ACH treatment guidelines working group",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Stefan Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Advance dialogue on FGFR3 pathway data and clinical implications",
+        "channel": "- 1:1 MSL scientific exchange",
+        "type": "- 1:1 MSL scientific exchange",
+        "stakeholders": "Stefan Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Finalize guidance document on off-label use and monitoring standards",
+        "channel": "- Advisory board",
+        "type": "- Advisory board",
+        "stakeholders": "Stefan Kowalski",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Oral presentation of treatment outcomes at ENDO 2026",
+        "channel": "- Congress presentation",
+        "type": "- Congress presentation",
+        "stakeholders": "Stefan Kowalski",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -10326,20 +11538,30 @@
           "Mentions": 11
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Quiet Champion"
+      },
+      {
+        "quarter": "Q2 '25",
+        "segment": "Vocal Advocate"
+      }
+    ]
   },
   {
-    "name": "Valentina Björk",
+    "name": "Emi Hashimoto",
     "tier": "Rising Star",
     "focusArea": "ACH",
-    "institution": "Rigshospitalet Copenhagen",
-    "specialty": "Orthopedics & Plastic Surgery",
+    "institution": "Hamamatsu Univ. School of Medicine",
+    "specialty": "Orthopedics",
     "research": "Pediatric orthopedic conditions; skeletal dysplasia and associated joint disorders. ",
-    "segment": "Quiet Champion",
+    "segment": "Vocal Advocate",
     "segmentMeta": {
-      "vocality": "low",
+      "vocality": "high",
       "belief": "high",
-      "objective": "Activate"
+      "objective": "Amplify"
     },
     "lead": "Maja Bonnet",
     "stakeholders": [
@@ -10357,10 +11579,12 @@
       "Q4 '24",
       "Q1 '25",
       "Q2 '25",
-      "Q3 '25"
+      "Q3 '25",
+      "Q1 '26",
+      "Q2 '26"
     ],
     "plannedThisQuarter": true,
-    "totalEngagements": 15,
+    "totalEngagements": 19,
     "engagements": [
       {
         "quarter": "Q3 '25",
@@ -10511,6 +11735,46 @@
         "stakeholders": "Fabio Moreau, Laura Bianchi, Sofia Hoffman, Marco Santos",
         "count": 1,
         "planned": false
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Regional",
+        "objective": "Lead regional educational webinar on skeletal dysplasia management",
+        "channel": "- Webinar speaker",
+        "type": "- Webinar speaker",
+        "stakeholders": "Maja Bonnet",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q1 '26",
+        "scope": "Global",
+        "objective": "Co-develop extended follow-up protocol for Phase 4 registry",
+        "channel": "- Steering committee",
+        "type": "- Steering committee",
+        "stakeholders": "Maja Bonnet",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "Global",
+        "objective": "Lead authorship on consensus statement for HCH clinical criteria",
+        "channel": "- Publication authorship",
+        "type": "- Publication authorship",
+        "stakeholders": "Maja Bonnet",
+        "count": 0,
+        "planned": true
+      },
+      {
+        "quarter": "Q2 '26",
+        "scope": "European",
+        "objective": "Participate in cross-country panel on diagnostic benchmarking",
+        "channel": "- KOL roundtable",
+        "type": "- KOL roundtable",
+        "stakeholders": "Maja Bonnet",
+        "count": 0,
+        "planned": true
       }
     ],
     "outcomes": "",
@@ -10654,6 +11918,16 @@
           "Mentions": 33
         }
       }
-    }
+    },
+    "segmentHistory": [
+      {
+        "quarter": "Q4 '20",
+        "segment": "Unconvinced Leader"
+      },
+      {
+        "quarter": "Q2 '25",
+        "segment": "Vocal Advocate"
+      }
+    ]
   }
 ]

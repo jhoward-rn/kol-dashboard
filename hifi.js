@@ -46,6 +46,7 @@
   const inflDetail = (k, d) => k.influenceDetail?.[d] || null;
   const trendArrow = (t) => t === 'up' ? '↑' : t === 'down' ? '↓' : '→';
   const trendLabel = (t) => t === 'up' ? '12-mo rising' : t === 'down' ? '12-mo declining' : '12-mo flat';
+  const quarterVal = (q) => { const m = (q||'').match(/Q([1-4])\s*'(\d{2})/); return m ? +m[2]*10 + +m[1] : 0; };
   // Percentile of `k` within its specialty cohort for a dim
   function percentileWithinSpecialty(k, d) {
     const cohort = KOLS.filter(x => (x.specialty || '').trim() === (k.specialty || '').trim());
@@ -92,14 +93,21 @@
     country: new Set(),
     segment: new Set(),
     planned: new Set(),
+    specialty: new Set(),
     influence: { clinical: [0,100], geographic: [0,100], online: [0,100] },
     selection: new Set(), // KOL names selected for compare
     sort: 'name',
+    sortDir: 'asc',
     density: 'comfortable',
     theme: 'light',
     groupby: 'none',
   };
   const COMPARE_MAX = 5;
+  const DEFAULT_DIRS = {
+    name: 'asc', tier: 'asc', segment: 'asc', country: 'asc', specialty: 'asc', lead: 'asc',
+    engagements: 'desc', recent: 'desc',
+    'infl-clinical': 'desc', 'infl-geographic': 'desc', 'infl-online': 'desc',
+  };
   // Index KOLs by name for selection lookup
   const KOL_BY_NAME = Object.fromEntries(KOLS.map(k => [k.name, k]));
 
@@ -109,6 +117,7 @@
     if (state.country.size) list = list.filter(k => state.country.has(k.country));
     if (state.segment.size) list = list.filter(k => state.segment.has(k.segment));
     if (state.planned.size) list = list.filter(k => state.planned.has(k.plannedThisQuarter ? 'planned' : 'unplanned'));
+    if (state.specialty.size) list = list.filter(k => state.specialty.has(k.specialty));
     for (const d of INFL_DIMS) {
       const [lo, hi] = state.influence[d];
       if (lo > 0 || hi < 100) list = list.filter(k => {
@@ -125,16 +134,20 @@
         (k.lead||'').toLowerCase().includes(q)
       );
     }
+    const dir = state.sortDir === 'asc' ? 1 : -1;
     list.sort((a,b) => {
-      if (state.sort === 'name') return a.name.localeCompare(b.name);
-      if (state.sort === 'engagements') return b.totalEngagements - a.totalEngagements;
-      if (state.sort === 'recent') return (b.quarters[0]||'').localeCompare(a.quarters[0]||'');
-      if (state.sort === 'specialty') return (a.specialty||'').localeCompare(b.specialty||'') || a.name.localeCompare(b.name);
-      if (state.sort.startsWith('infl-')) {
+      if (state.sort === 'name') return a.name.localeCompare(b.name) * dir;
+      let primary = 0;
+      if (state.sort === 'engagements') primary = a.totalEngagements - b.totalEngagements;
+      else if (state.sort === 'recent') primary = (a.quarters[0]||'').localeCompare(b.quarters[0]||'');
+      else if (state.sort === 'specialty') primary = (a.specialty||'').localeCompare(b.specialty||'');
+      else if (state.sort.startsWith('infl-')) {
         const d = state.sort.slice(5);
-        return inflScore(b, d) - inflScore(a, d) || a.name.localeCompare(b.name);
+        primary = inflScore(a, d) - inflScore(b, d);
+      } else {
+        primary = segPriority(a.segment) - segPriority(b.segment);
       }
-      return segPriority(a.segment) - segPriority(b.segment) || a.name.localeCompare(b.name);
+      return primary !== 0 ? primary * dir : a.name.localeCompare(b.name);
     });
     return list;
   }
@@ -147,6 +160,7 @@
       if (key === 'country') return [...new Set(all.map(k=>k.country))].sort();
       if (key === 'segment') return [...new Set(all.map(k=>k.segment).filter(Boolean))];
       if (key === 'planned') return ['planned','unplanned'];
+      if (key === 'specialty') return [...new Set(all.map(k=>k.specialty).filter(Boolean))].sort();
       return [];
     };
     const labelFor = (key, v) => {
@@ -157,7 +171,7 @@
     const countFor = (key, v) => {
       let pool = KOLS.slice();
       // Keep other filters applied; this one excluded so counts stay useful
-      for (const k2 of ['tier','country','segment','planned']) {
+      for (const k2 of ['tier','country','segment','planned','specialty']) {
         if (k2 === key) continue;
         const set = state[k2];
         if (!set.size) continue;
@@ -242,7 +256,11 @@
   // Search input
   $('#search').addEventListener('input', e => { state.search = e.target.value; render(); });
   // Sort
-  $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
+  $('#sort').addEventListener('change', e => {
+    state.sort = e.target.value;
+    state.sortDir = DEFAULT_DIRS[state.sort] || 'asc';
+    render();
+  });
 
   // ── KPIs ──
   function renderKpis() {
@@ -269,11 +287,17 @@
       ),
     ));
 
+    let completedEng = 0, plannedEng = 0;
+    for (const k of list) {
+      for (const e of k.engagements || []) {
+        if (e.planned) plannedEng++; else completedEng++;
+      }
+    }
     kpis.appendChild(el('div', { class: 'kpi' },
-      el('div', { class: 'l' }, el('i', { 'data-lucide': 'calendar-check' }), 'Engagements YTD'),
-      el('div', { class: 'v' }, String(eng)),
+      el('div', { class: 'l' }, el('i', { 'data-lucide': 'calendar-check' }), 'Engagements to date'),
+      el('div', { class: 'v' }, String(completedEng), el('span', { class: 'small' }, `/${completedEng + plannedEng}`)),
       el('div', { class: 'meta' },
-        el('span', { class: 'tag' }, 'planned + completed'),
+        el('span', { class: 'tag' }, 'Completed / Planned'),
       ),
     ));
 
@@ -295,31 +319,19 @@
       segBars.appendChild(el('span', { class: `b ${cls}`, style: { flex: String(c) } }));
       segLegend.appendChild(el('span', {}, el('span', { class: `dot ${cls}` }), `${segObj(s)} · ${c}`));
     }
-    // ── Influence Coverage (replaces Segment Mix) ──
+    // ── Influence Coverage ──
     const cov = el('div', { class: 'infl-cov' });
-    const dimCounts = {};
-    let weakest = null, weakestPct = 100;
     for (const d of INFL_DIMS) {
-      const thresh = topQuartileThreshold(list, d);
-      const tq = list.filter(k => inflScore(k, d) >= thresh && inflScore(k, d) > 0).length;
-      dimCounts[d] = tq;
-      const pct = total ? Math.round(tq / total * 100) : 0;
-      const isGap = tq <= 4 || pct < 20;
-      if (pct < weakestPct) { weakestPct = pct; weakest = d; }
-      cov.appendChild(el('div', { class: `infl-cov-row dim-${d}${isGap ? ' gap' : ''}` },
+      const avg = total ? Math.round(list.reduce((s,k) => s + inflScore(k,d), 0) / total) : 0;
+      cov.appendChild(el('div', { class: `infl-cov-row dim-${d}` },
         el('div', { class: 'nm' }, el('span', { class: `dot dim-${d}` }), inflLabel[d]),
-        el('div', { class: 'bar' }, el('div', { class: 'fill', style: { width: `${pct}%` } })),
-        el('div', { class: 'ct' }, `${tq}/${total}`),
+        el('div', { class: 'bar' }, el('div', { class: 'fill', style: { width: `${avg}%` } })),
+        el('div', { class: 'ct' }, `${avg}%`),
       ));
     }
-    const headlineDim = weakest || 'online';
-    const headlineCt = dimCounts[headlineDim];
     kpis.appendChild(el('div', { class: 'kpi' },
       el('div', { class: 'l' }, el('i', { 'data-lucide': 'target' }), 'Influence coverage'),
-      el('div', { class: 'v', style: { fontSize: '24px', marginTop: '6px' } },
-        `${inflLabel[headlineDim]}: ${headlineCt} of ${total}`,
-        el('span', { class: 'small', style: { fontSize: '13px' } }, ' top-quartile'),
-      ),
+      el('div', { class: 'kpi-sub' }, 'Average by type'),
       cov,
     ));
   }
@@ -339,6 +351,7 @@
     for (const v of state.country) add('country', v, v);
     for (const v of state.segment) add('segment', v, segObj(v));
     for (const v of state.planned) add('planned', v, v === 'planned' ? 'Has planned activity' : 'No planned activity');
+    for (const v of state.specialty) add('specialty', v, v);
     for (const d of INFL_DIMS) {
       const [lo, hi] = state.influence[d];
       if (lo > 0 || hi < 100) {
@@ -360,7 +373,7 @@
     if (af.children.length) {
       af.appendChild(el('button', { class: 'btn ghost', style: { height: '26px', padding: '0 10px', fontSize: '12px' },
         onClick: () => {
-          state.tier.clear(); state.country.clear(); state.segment.clear(); state.planned.clear();
+          state.tier.clear(); state.country.clear(); state.segment.clear(); state.planned.clear(); state.specialty.clear();
           state.influence = { clinical: [0,100], geographic: [0,100], online: [0,100] };
           state.search=''; $('#search').value=''; render();
         }
@@ -434,19 +447,18 @@
       el('td', {}, k.segment
         ? el('span', { class: `tag seg seg-${segClass(k.segment)}` }, segObj(k.segment))
         : el('span', { style:{ color: 'var(--gray-500)' } }, '—')),
-      el('td', {}, el('span', {}, k.country)),
-      el('td', {}, k.specialty || el('span', { style:{ color: 'var(--gray-500)' } }, '—')),
-      el('td', {}, inflCell(k, 'clinical')),
-      el('td', {}, inflCell(k, 'geographic')),
-      el('td', {}, inflCell(k, 'online')),
-      el('td', {}, k.lead || el('span', { style:{ color: 'var(--gray-500)' } }, '—')),
-      el('td', {}, el('span', { style:{fontFamily:'var(--font-mono)', fontSize:'12px'} }, k.quarters[0] || '—')),
       el('td', {},
         el('div', { class: 'eng-cell' },
           el('div', { class: 'eng-bar' }, el('div', { class: 'fill', style:{ width: `${Math.min(k.totalEngagements/30*100, 100)}%` } })),
           el('span', { class: 'num' }, String(k.totalEngagements)),
         )
       ),
+      el('td', {}, el('span', {}, k.country)),
+      el('td', {}, k.specialty || el('span', { style:{ color: 'var(--gray-500)' } }, '—')),
+      el('td', {}, k.lead || el('span', { style:{ color: 'var(--gray-500)' } }, '—')),
+      el('td', {}, inflCell(k, 'clinical')),
+      el('td', {}, inflCell(k, 'geographic')),
+      el('td', {}, inflCell(k, 'online')),
       el('td', { class: 'actions-cell' },
         el('button', { class: 'icon-btn', title: 'Open profile', onClick: () => openProfile(k) },
           el('i', { 'data-lucide': 'eye' })),
@@ -468,7 +480,7 @@
         el('h3', {}, 'No KOLs match your filters'),
         el('p', {}, 'Try clearing some filters or adjusting your search.'),
         el('button', { class: 'btn outline', onClick: () => {
-          state.tier.clear(); state.country.clear(); state.segment.clear(); state.planned.clear();
+          state.tier.clear(); state.country.clear(); state.segment.clear(); state.planned.clear(); state.specialty.clear();
           state.search = ''; $('#search').value=''; render();
         }}, 'Clear all filters'),
       ));
@@ -477,24 +489,33 @@
 
     const headers = [
       [{ html: '', plain: '' }, null], // checkbox column
-      ['Name','name'], ['Tier','tier'], ['Segment','segment'], ['Country','country'],
-      ['Specialty', 'specialty'],
+      ['Name','name'], ['Tier','tier'], ['Segment','segment'], ['Engagements','engagements'],
+      ['Country','country'], ['Specialty', 'specialty'], ['Lead','lead'],
       [{ html: '<span class="hdr-dot dim-clinical"></span>Clinical', plain: 'Clinical' }, 'infl-clinical'],
       [{ html: '<span class="hdr-dot dim-geographic"></span>Geographic', plain: 'Geographic' }, 'infl-geographic'],
       [{ html: '<span class="hdr-dot dim-online"></span>Online', plain: 'Online' }, 'infl-online'],
-      ['Lead','lead'], ['Quarter','recent'], ['Engagements','engagements'], ['', null]
+      ['', null]
     ];
     const thead = el('thead', {}, el('tr', {},
       ...headers.map(([h, sortKey]) => {
         const isComplex = h && typeof h === 'object';
+        const isActive = state.sort === sortKey;
         return el('th', {},
           sortKey ? el('button', {
-            class: state.sort === sortKey ? 'active' : '',
-            onClick: () => { state.sort = sortKey; render(); },
+            class: isActive ? 'active' : '',
+            onClick: () => {
+              if (state.sort === sortKey) {
+                state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+              } else {
+                state.sort = sortKey;
+                state.sortDir = DEFAULT_DIRS[sortKey] || 'asc';
+              }
+              render();
+            },
             ...(isComplex ? { html: h.html } : {})
           },
             ...(isComplex ? [] : [h]),
-            el('i', { 'data-lucide': state.sort === sortKey ? 'arrow-down' : 'chevrons-up-down' })
+            el('i', { 'data-lucide': isActive ? (state.sortDir === 'asc' ? 'arrow-up' : 'arrow-down') : 'chevrons-up-down' })
           )
           : (isComplex ? h.plain : h)
         );
@@ -519,7 +540,7 @@
       for (const g of order) {
         const tb = el('tbody');
         tb.appendChild(el('tr', { style: { background: 'var(--gray-50)' } },
-          el('td', { colspan: 13, style: { padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gray-500)' } },
+          el('td', { colspan: 12, style: { padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gray-500)' } },
             `${g} · ${groups[g].length} KOL${groups[g].length>1?'s':''}`)
         ));
         for (const k of groups[g]) tb.appendChild(rowFor(k));
@@ -610,7 +631,7 @@
 
     // Profile details
     body.appendChild(el('section', { class: 'section' },
-      el('div', { class: 'section-head' }, 'Profile'),
+      el('div', { class: 'section-head', style: { color: 'var(--rn-dark-teal)', fontWeight: '700' } }, 'Profile'),
       el('dl', { class: 'kv' },
         el('dt', {}, 'Lead'), el('dd', {}, k.lead || '—'),
         el('dt', {}, 'Research focus'), el('dd', {}, k.research || el('em', { style:{color:'var(--gray-500)'} }, 'Not specified')),
@@ -718,7 +739,7 @@
       byQ[q] = byQ[q] || [];
       byQ[q].push(e);
     }
-    const sortedQs = Object.keys(byQ).sort();
+    const sortedQs = Object.keys(byQ).sort((a, b) => quarterVal(b) - quarterVal(a));
     for (const q of sortedQs) {
       const events = el('div', { class: 'events' });
       byQ[q].forEach((e, idx) => {
@@ -919,7 +940,7 @@
         byQ[q] = byQ[q] || [];
         byQ[q].push(e);
       }
-      const sortedQs = Object.keys(byQ).sort();
+      const sortedQs = Object.keys(byQ).sort((a, b) => quarterVal(b) - quarterVal(a));
       for (const q of sortedQs.slice(0, 5)) {
         const evs = byQ[q];
         const summary = evs[0].objective || evs[0].type || (evs[0].channel || '').split('\n')[0] || 'Activity';

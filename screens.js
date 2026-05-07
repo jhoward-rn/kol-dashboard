@@ -87,9 +87,8 @@
   });
 
   // ── ENGAGEMENTS view ──
-  let engMode = 'list';
   let engSort = { key: 'quarter', dir: 'desc' };
-  const engFilter = { quarter: '', channel: '', status: 'all' };
+  const engFilter = { quarter: '', channel: '', specialty: '', status: 'all' };
   let engKpisBuilt = false;
 
   function quarterVal(q) {
@@ -121,6 +120,26 @@
     );
     qSec.appendChild(qSelect);
     host.appendChild(qSec);
+
+    // Specialty dropdown
+    const spSec = el('div', { class: 'filter-section' });
+    spSec.appendChild(el('div', { class: 'heading' },
+      el('span', {}, 'Specialty'),
+      el('button', { onClick: () => { engFilter.specialty = ''; renderEngagements(); } }, 'Clear'),
+    ));
+    const uniqSpecialties = [...new Set(KOLS.map(k => k.specialty).filter(Boolean))].sort();
+    const spSelect = el('select', { class: 'eng-filter-select',
+      onChange: (ev) => { engFilter.specialty = ev.target.value; renderEngagements(); },
+    },
+      el('option', { value: '' }, 'All specialties'),
+      ...uniqSpecialties.map(s => {
+        const opt = el('option', { value: s }, s);
+        if (engFilter.specialty === s) opt.setAttribute('selected', '');
+        return opt;
+      }),
+    );
+    spSec.appendChild(spSelect);
+    host.appendChild(spSec);
 
     // Channel dropdown
     const chSec = el('div', { class: 'filter-section' });
@@ -188,42 +207,7 @@
 
     const body = $('#engBody');
     body.innerHTML = '';
-    if (engMode === 'calendar') body.appendChild(renderCalendar());
-    else body.appendChild(renderEngList());
-  }
-
-  function renderCalendar() {
-    const grid = el('div', { class: 'cal-grid' });
-    grid.appendChild(el('div', { class: 'cal-head' }, ''));
-    QUARTERS.forEach(q => grid.appendChild(el('div', {
-      class: 'cal-head q-head' + (q === CURRENT_QUARTER ? ' current' : ''),
-    }, q + (q === CURRENT_QUARTER ? ' · current' : ''))));
-
-    const rowKeys = ['Germany', 'Italy', 'Japan'];
-    rowKeys.forEach(country => {
-      const kolsIn = KOLS.filter(k => k.country === country);
-      const row = el('div', { class: 'cal-row' });
-      row.appendChild(el('div', { class: 'cal-row-label' },
-        country,
-        el('span', { class: 'ct' }, `${kolsIn.length} KOLs`)
-      ));
-      QUARTERS.forEach(q => {
-        const cell = el('div', { class: 'cal-cell' + (q === CURRENT_QUARTER ? ' current' : '') });
-        const events = ALL_EVENTS.filter(e => e.kol.country === country && e.quarter === q);
-        events.slice(0, 5).forEach(e => {
-          cell.appendChild(el('div', { class: `ev-pill ${segClass(e.kol.segment)} ${e.completed ? 'actual' : ''}`, title: `${e.kol.name} — ${e.objective}` },
-            el('div', { class: 'who' }, e.kol.name.split(' ').slice(-1)[0]),
-            el('div', { class: 'what' }, e.channel.replace(/^[\-\s•]+/, '').slice(0, 40)),
-          ));
-        });
-        if (events.length > 5) {
-          cell.appendChild(el('div', { style:{fontSize:'11px', color:'var(--gray-500)', fontFamily:'var(--font-mono)'}}, `+${events.length - 5} more`));
-        }
-        row.appendChild(cell);
-      });
-      grid.appendChild(row);
-    });
-    return grid;
+    body.appendChild(renderEngList());
   }
 
   function renderEngList() {
@@ -231,6 +215,7 @@
 
     let events = ALL_EVENTS.slice();
     if (engFilter.quarter) events = events.filter(e => e.quarter === engFilter.quarter);
+    if (engFilter.specialty) events = events.filter(e => e.kol.specialty === engFilter.specialty);
     if (engFilter.channel) events = events.filter(e => e.channel === engFilter.channel);
     if (engFilter.status === 'completed') events = events.filter(e => e.completed);
     else if (engFilter.status === 'planned') events = events.filter(e => !e.completed);
@@ -243,6 +228,8 @@
         cmp = a.kol.name.localeCompare(b.kol.name);
       } else if (key === 'activity') {
         cmp = (a.objective || '').localeCompare(b.objective || '');
+      } else if (key === 'specialty') {
+        cmp = (a.kol.specialty || '').localeCompare(b.kol.specialty || '');
       } else if (key === 'channel') {
         cmp = (a.channel || '').localeCompare(b.channel || '');
       } else if (key === 'status') {
@@ -252,11 +239,12 @@
     });
 
     const COLS = [
-      { label: 'Quarter',  key: 'quarter'  },
-      { label: 'KOL',      key: 'kol'      },
-      { label: 'Activity', key: 'activity' },
-      { label: 'Channel',  key: 'channel'  },
-      { label: 'Status',   key: 'status'   },
+      { label: 'Quarter',   key: 'quarter'   },
+      { label: 'KOL',       key: 'kol'       },
+      { label: 'Specialty', key: 'specialty' },
+      { label: 'Activity',  key: 'activity'  },
+      { label: 'Channel',   key: 'channel'   },
+      { label: 'Status',    key: 'status'    },
     ];
 
     const list = el('div', { class: 'eng-list' });
@@ -301,6 +289,7 @@
             el('div', { style:{fontSize:'11px',color:'var(--gray-500)',marginTop:'2px'} }, tierLabel),
           ),
         ),
+        el('div', { style:{fontSize:'12px',color:'var(--gray-500)'} }, e.kol.specialty || '—'),
         el('div', { style:{fontSize:'13px'} }, e.objective.slice(0, 80)),
         el('div', { style:{fontSize:'12px', color:'var(--gray-500)'} }, e.channel.replace(/^[\-\s•]+/, '').slice(0, 30)),
         el('div', {}, el('span', { class: e.completed ? 'tag status-completed' : 'tag status-planned' },
@@ -309,14 +298,6 @@
     });
     return list;
   }
-
-  $$('#engViewToggle button').forEach(b => b.addEventListener('click', () => {
-    $$('#engViewToggle button').forEach(x => x.dataset.on = 'false');
-    b.dataset.on = 'true';
-    engMode = b.dataset.val;
-    renderEngagements();
-    if (window.lucide) lucide.createIcons();
-  }));
 
   function renderInsights() {
     const body = $('#insightsBody');
@@ -385,7 +366,7 @@
 
     const quadPanel = el('div', { class: 'panel' },
       el('h3', {}, 'Segment quadrant'),
-      el('div', { class: 'sub' }, 'Vocality × belief — drag the slider to explore segment evolution over time'),
+      el('div', { class: 'sub' }, 'Vocality × belief — drag or press play to animate segment evolution over time'),
     );
     const quad = el('div', { class: 'quad' });
     quad.appendChild(el('div', { class: 'q-cell tl' }, el('span', { class: 'seg-name' }, 'Quiet Champion'),    el('span', { class: 'obj' }, 'Objective: Activate')));
@@ -407,14 +388,14 @@
       quad.appendChild(dot);
     });
 
-    // Slider controls
+    // Slider + playback
     const sliderQLabel = el('div', { class: 'quad-slider-q' }, 'Segment evolution over time');
     const slider = el('input', {
       type: 'range', min: '0', max: String(ALL_QUARTERS.length - 1),
       value: String(initQIdx), class: 'quad-slider-input',
     });
-    slider.addEventListener('input', () => {
-      const qIdx = +slider.value;
+
+    function updateDotsAt(qIdx) {
       filteredKols.forEach((k, i) => {
         const dot = dotMap[k.name];
         if (!dot) return;
@@ -425,11 +406,55 @@
         if (dot.className !== nc) dot.className = nc;
         dot.title = `${k.name} — ${k.country}`;
       });
+    }
+
+    // Play button
+    let playTimer = null;
+    const playBtn = el('button', { class: 'quad-play-btn', title: 'Play evolution' });
+
+    function setPlayIcon(name) {
+      playBtn.innerHTML = '';
+      playBtn.appendChild(el('i', { 'data-lucide': name, style: { width: '12px', height: '12px' } }));
+      if (window.lucide) lucide.createIcons({ el: playBtn });
+    }
+
+    function stopPlay() {
+      if (playTimer) { clearInterval(playTimer); playTimer = null; }
+      setPlayIcon('play');
+    }
+
+    playBtn.addEventListener('click', () => {
+      if (playTimer) { stopPlay(); return; }
+      if (+slider.value >= ALL_QUARTERS.length - 1) {
+        slider.value = '0';
+        updateDotsAt(0);
+      }
+      setPlayIcon('pause');
+      playTimer = setInterval(() => {
+        const next = +slider.value + 1;
+        if (next >= ALL_QUARTERS.length) { stopPlay(); return; }
+        slider.value = String(next);
+        updateDotsAt(next);
+      }, 500);
     });
+
+    slider.addEventListener('input', () => {
+      if (playTimer) stopPlay();
+      updateDotsAt(+slider.value);
+    });
+
+    setPlayIcon('play');
+
     const sliderWrap = el('div', { class: 'quad-slider-wrap' },
-      el('span', { class: 'quad-slider-edge' }, ALL_QUARTERS[0]),
-      el('div', { class: 'quad-slider-inner' }, slider, sliderQLabel),
-      el('span', { class: 'quad-slider-edge' }, ALL_QUARTERS[ALL_QUARTERS.length - 1]),
+      el('div', { class: 'quad-slider-row' },
+        playBtn,
+        slider,
+      ),
+      el('div', { class: 'quad-slider-labels' },
+        el('span', { class: 'quad-slider-edge' }, ALL_QUARTERS[0]),
+        sliderQLabel,
+        el('span', { class: 'quad-slider-edge' }, ALL_QUARTERS[ALL_QUARTERS.length - 1]),
+      ),
     );
 
     const quadWrap = el('div', { class: 'quad-wrap' },
@@ -584,27 +609,60 @@
     // KOLs by country
     const countryPanel = el('div', { class: 'panel' },
       el('h3', {}, 'KOLs by country'),
-      el('div', { class: 'sub' }, 'Coverage and tier breakdown'),
+      el('div', { class: 'sub' }, 'Segment distribution — Medical Expert and Rising Star counts'),
     );
     const bars = el('div', { class: 'bars' });
-    const countries = [...new Set(KOLS.map(k=>k.country))];
+    const countries = [...new Set(KOLS.map(k=>k.country))].sort(
+      (a, b) => KOLS.filter(k=>k.country===b).length - KOLS.filter(k=>k.country===a).length
+    );
     const maxC = Math.max(...countries.map(c => KOLS.filter(k=>k.country===c).length));
+    const SEG_SEGS = [
+      { seg: 'Vocal Advocate',    cls: 'amplify'    },
+      { seg: 'Quiet Champion',    cls: 'activate'   },
+      { seg: 'Cautious Skeptic',  cls: 'strengthen' },
+      { seg: 'Unconvinced Leader',cls: 'realign'    },
+    ];
     countries.forEach(c => {
-      const ct = KOLS.filter(k=>k.country===c).length;
-      const me = KOLS.filter(k=>k.country===c && k.tier==='ME').length;
-      bars.appendChild(el('div', { class: 'bar-row' },
+      const kolsC = KOLS.filter(k => k.country === c);
+      const ct  = kolsC.length;
+      const me  = kolsC.filter(k => k.tier === 'ME').length;
+      const rs  = ct - me;
+      const segBar = el('div', { style: { display:'flex', width:`${ct/maxC*100}%`, height:'100%' } });
+      SEG_SEGS.forEach(({ seg, cls }) => {
+        const n = kolsC.filter(k => k.segment === seg).length;
+        if (!n) return;
+        segBar.appendChild(el('div', {
+          style: { width:`${n/ct*100}%`, height:'100%', background:`var(--segment-${cls})` },
+          title: `${seg}: ${n}`,
+        }));
+      });
+      bars.appendChild(el('div', { class: 'bar-row', style: { gridTemplateColumns:'90px 22px 1fr 60px' } },
         el('div', { class: 'lbl' }, c),
-        el('div', { class: 'track' },
-          el('div', { class: 'fill', style:{width: `${ct/maxC*100}%`} })
+        el('div', { class: 'country-kol-ct' }, String(ct)),
+        el('div', { class: 'track' }, segBar),
+        el('div', { class: 'country-tier-val' },
+          el('span', { class: 'country-tier-n' }, String(me)),
+          el('span', { class: 'country-tier-n' }, String(rs)),
+          el('span', { class: 'country-tier-l' }, 'ME'),
+          el('span', { class: 'country-tier-l' }, 'RS'),
         ),
-        el('div', { class: 'val' }, `${ct} · ${me} ME`),
       ));
     });
     countryPanel.appendChild(bars);
 
-    row2.appendChild(inflPanel);
-    row2.appendChild(channelPanel);
+    const segLegend = el('div', { class: 'seg-legend' });
+    SEG_SEGS.forEach(({ seg, cls }) => {
+      const label = { amplify:'Amplify', activate:'Activate', strengthen:'Strengthen', realign:'Realign' }[cls];
+      segLegend.appendChild(el('span', {},
+        el('span', { class: `dot ${cls}` }),
+        ` ${label}`,
+      ));
+    });
+    countryPanel.appendChild(segLegend);
+
     row2.appendChild(countryPanel);
+    row2.appendChild(channelPanel);
+    row2.appendChild(inflPanel);
     body.appendChild(row2);
   }
 

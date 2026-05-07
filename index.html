@@ -136,6 +136,39 @@
     font-size: 14px; color: var(--rn-sage); line-height: 1.5;
   }
   .topbar .actions { display: flex; gap: 8px; align-items: center; }
+  .brand-name-row { display: flex; align-items: center; gap: 7px; }
+  .help-btn {
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 1.5px solid var(--rn-dark-teal); background: transparent;
+    color: var(--rn-dark-teal); font-size: 11px; font-weight: 700; line-height: 1;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; padding: 0;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .help-btn:hover { border-color: var(--rn-sage); color: var(--rn-sage); }
+  .help-popover {
+    display: none; position: fixed; z-index: 500;
+    width: 300px; background: #fff;
+    border: 1px solid var(--gray-200); border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(14,67,67,0.15); padding: 18px 20px;
+  }
+  .help-popover.open { display: block; }
+  .help-popover .pop-title {
+    font-family: var(--font-display); font-size: 18px; font-weight: 700;
+    color: var(--rn-dark-teal); margin: 0 0 10px;
+  }
+  .help-popover .pop-desc {
+    font-size: 13px; color: var(--rn-dark-teal); line-height: 1.55; margin: 0 0 12px;
+  }
+  .help-popover .pop-features { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+  .help-popover .pop-features li {
+    font-size: 12.5px; color: var(--rn-dark-teal);
+    display: flex; align-items: flex-start; gap: 7px; line-height: 1.4;
+  }
+  .help-popover .pop-features li::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--rn-mint); flex-shrink: 0; margin-top: 4px;
+  }
 
   .btn {
     display: inline-flex; align-items: center; gap: 6px;
@@ -452,10 +485,10 @@
   .range-dual input[type="range"]::-webkit-slider-runnable-track { background: transparent; }
   .range-dual input[type="range"]::-moz-range-track { background: transparent; }
 
-  /* Influence Coverage KPI (replaces Segment Mix) */
-  .infl-cov { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+  /* Influence Coverage KPI */
+  .infl-cov { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
   .infl-cov-row {
-    display: grid; grid-template-columns: 70px 1fr auto;
+    display: grid; grid-template-columns: 84px 1fr auto;
     align-items: center; gap: 10px;
     font-size: 12px;
   }
@@ -483,7 +516,7 @@
     color: var(--gray-500); white-space: nowrap;
     font-variant-numeric: tabular-nums;
   }
-  .infl-cov-row.gap .ct { color: var(--segment-realign); font-weight: 500; }
+  .kpi-sub { font-size: 11.5px; color: rgb(15,160,90); margin: 2px 0 4px; }
 
   /* Influence section in drawer — expanded layout with sub-components, sparkline, completeness */
   .infl-detail-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 8px; }
@@ -1173,65 +1206,13 @@
   /* ── View visibility ───────────────────────── */
   .view[hidden] { display: none; }
 
-  /* ── Engagements: calendar ─────────────────── */
-  .cal-grid {
-    display: grid; grid-template-columns: 100px repeat(4, 1fr);
-    border: 1px solid var(--border); border-radius: var(--radius-lg);
-    overflow: auto; background: #fff; min-width: 600px;
-  }
-  .cal-head {
-    font-family: var(--font-mono); font-size: 11px;
-    letter-spacing: .14em; text-transform: uppercase; color: var(--gray-500);
-    padding: 14px 16px; border-bottom: 1px solid var(--border);
-    background: var(--gray-50);
-  }
-  .cal-head.q-head { text-align: center; border-right: 1px solid var(--border); }
-  .cal-head.q-head:last-child { border-right: 0; }
-  .cal-head.q-head.current { color: var(--rn-deep-teal); background: rgba(19,211,119,.08); }
-  .cal-row { display: contents; }
-  .cal-row-label {
-    padding: 16px; border-bottom: 1px solid var(--border);
-    font-size: 13px; font-weight: 500; color: var(--rn-dark-teal);
-    background: var(--gray-50);
-    display: flex; flex-direction: column; gap: 4px; justify-content: center;
-  }
-  .cal-row-label .ct { font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); }
-  .cal-cell {
-    padding: 10px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border);
-    min-height: 90px;
-    display: flex; flex-direction: column; gap: 6px;
-  }
-  .cal-cell:last-child { border-right: 0; }
-  .cal-cell.current { background: rgba(19,211,119,.04); }
-  .cal-row:last-child .cal-row-label,
-  .cal-row:last-child .cal-cell { border-bottom: 0; }
-
-  .ev-pill {
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 6px 9px;
-    font-size: 11.5px; line-height: 1.35;
-    background: #fff;
-    cursor: pointer;
-    transition: all .12s;
-  }
-  .ev-pill:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
-  .ev-pill .who { font-weight: 500; color: var(--rn-dark-teal); }
-  .ev-pill .what { color: var(--gray-500); margin-top: 1px; }
-  .ev-pill.actual { border-color: rgba(19,211,119,.4); background: rgba(19,211,119,.06); }
-  .ev-pill.actual .who { color: var(--rn-deep-teal); }
-  .ev-pill.amplify { border-left: 3px solid var(--segment-amplify); }
-  .ev-pill.activate { border-left: 3px solid var(--segment-activate); }
-  .ev-pill.realign { border-left: 3px solid var(--segment-realign); }
-  .ev-pill.strengthen { border-left: 3px solid var(--segment-strengthen); }
-
   /* Engagements: list view */
   .eng-list {
     border: 1px solid var(--border); border-radius: var(--radius-lg);
     background: #fff; overflow: auto;
   }
   .eng-list-row {
-    display: grid; grid-template-columns: 90px 200px 1fr 130px 120px;
+    display: grid; grid-template-columns: 90px 200px 130px 1fr 130px 120px;
     gap: 16px; padding: 14px 20px; border-bottom: 1px solid var(--border);
     font-size: 13.5px; align-items: center; min-width: 680px;
   }
@@ -1284,12 +1265,12 @@
     margin-top: 16px;
   }
   .quad .q-cell {
-    position: absolute; padding: 14px 16px;
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
+    position: absolute; padding: 9px 11px;
+    font-family: var(--font-mono); font-size: 8.5px; letter-spacing: .10em;
     text-transform: uppercase; color: var(--gray-500);
     pointer-events: none;
   }
-  .quad .q-cell .obj { display: block; font-size: 9.5px; color: var(--gray-500); margin-top: 2px; }
+  .quad .q-cell .obj { display: block; font-size: 8px; color: var(--gray-500); margin-top: 2px; letter-spacing: .08em; }
   .quad .q-cell .seg-name { color: var(--rn-dark-teal); font-weight: 500; }
   .q-cell.tl { top: 0; left: 0; }
   .q-cell.tr { top: 0; right: 0; text-align: right; }
@@ -1338,11 +1319,15 @@
   .quad .pt.strengthen { background: var(--segment-strengthen); }
   /* Quad time slider */
   .quad .pt { transition: left 0.25s ease, top 0.25s ease, background-color 0.2s; }
-  .quad-slider-wrap { display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 0 2px; }
+  .quad-slider-wrap { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
+  .quad-slider-row { display: flex; align-items: center; gap: 8px; }
+  .quad-slider-input { flex: 1; accent-color: var(--rn-deep-teal); cursor: pointer; height: 4px; }
+  .quad-slider-labels { display: flex; align-items: center; padding-left: 34px; }
   .quad-slider-edge { font-family: var(--font-mono); font-size: 10px; color: var(--gray-500); letter-spacing: .08em; white-space: nowrap; flex-shrink: 0; }
-  .quad-slider-inner { flex: 1; display: flex; flex-direction: column; gap: 3px; }
-  .quad-slider-input { width: 100%; accent-color: var(--rn-deep-teal); cursor: pointer; height: 4px; }
-  .quad-slider-q { font-family: var(--font-mono); font-size: 10px; color: var(--rn-deep-teal); letter-spacing: .08em; text-align: center; font-weight: 600; }
+  .quad-slider-q { flex: 1; font-family: var(--font-mono); font-size: 10px; color: var(--rn-deep-teal); letter-spacing: .08em; text-align: center; font-weight: 600; }
+  .quad-play-btn { display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%; border: 1.5px solid var(--rn-deep-teal); background: transparent; color: var(--rn-deep-teal); cursor: pointer; padding: 0; transition: background 0.15s, color 0.15s; }
+  .quad-play-btn:hover { background: var(--rn-deep-teal); color: #fff; }
+  .quad-play-btn svg { display: block; }
 
   /* Bar chart (horizontal) */
   .bars { display: flex; flex-direction: column; gap: 12px; }
@@ -1351,6 +1336,10 @@
   .bar-row .track { height: 10px; background: var(--gray-100); border-radius: 5px; overflow: hidden; }
   .bar-row .fill { height: 100%; border-radius: 5px; background: var(--rn-deep-teal); }
   .bar-row .val { font-family: var(--font-mono); font-size: 12px; color: var(--gray-500); text-align: right; }
+  .country-tier-val { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4px; text-align: center; }
+  .country-tier-n { font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--gray-700); line-height: 1.4; }
+  .country-tier-l { font-size: 9px; color: var(--gray-400); text-transform: uppercase; letter-spacing: .05em; line-height: 1; }
+  .country-kol-ct { font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); text-align: right; }
 
   /* Channel breakdown — donut */
   .donut-wrap { display: flex; align-items: center; gap: 24px; }
@@ -1448,19 +1437,16 @@
   .tag-pool .tag:hover .x { color: var(--rn-red); }
 
   /* Dark theme view-specific overrides */
-  body[data-theme="dark"] .cal-grid,
   body[data-theme="dark"] .eng-list,
   body[data-theme="dark"] .panel,
-  body[data-theme="dark"] .ev-pill,
   body[data-theme="dark"] .form-row input,
   body[data-theme="dark"] .form-row select,
   body[data-theme="dark"] .form-row textarea {
     background: rgb(15, 32, 42); border-color: rgba(255,255,255,.08); color: #e5e9ea;
   }
-  body[data-theme="dark"] .cal-head, body[data-theme="dark"] .cal-row-label,
   body[data-theme="dark"] .eng-list-row.head, body[data-theme="dark"] .team-tbl th { background: rgba(255,255,255,.04); color: rgba(229,233,234,.6); border-color: rgba(255,255,255,.08); }
   body[data-theme="dark"] .panel h3, body[data-theme="dark"] .settings-section h2,
-  body[data-theme="dark"] .form-row label, body[data-theme="dark"] .ev-pill .who { color: #fff; }
+  body[data-theme="dark"] .form-row label { color: #fff; }
   body[data-theme="dark"] .panel .sub, body[data-theme="dark"] .settings-section .desc,
   body[data-theme="dark"] .form-row .hint { color: rgba(229,233,234,.6); }
   body[data-theme="dark"] .settings-nav a { color: #e5e9ea; }
@@ -1610,13 +1596,6 @@
   .fmv { font-family: var(--font-mono); font-size: 12px; color: var(--rn-dark-teal); }
   body[data-theme="dark"] .fmv { color: #e5e9ea; }
 
-  /* ── Engagements toggle: match .btn height, inline icon+label ── */
-  #engViewToggle { height: 36px; }
-  #engViewToggle button {
-    display: inline-flex; align-items: center; gap: 5px;
-  }
-  #engViewToggle button [data-lucide] { width: 14px; height: 14px; }
-
   /* ── Engagements list: sortable header buttons ── */
   .eng-list-row.head button {
     background: transparent; border: 0; padding: 0;
@@ -1666,7 +1645,10 @@
   <aside class="sidebar">
     <div class="brand">
       <div class="mark">k</div>
-      <div class="name">KOL Engagement<span class="sub">Tracker · v1.0</span></div>
+      <div class="name">
+        <span class="brand-name-row">KOL Engagement<button class="help-btn" aria-label="About this tool">?</button></span>
+        <span class="sub">Tracker · v1.0</span>
+      </div>
     </div>
 
     <nav class="nav" id="nav">
@@ -1694,6 +1676,15 @@
         <div class="check-list"></div>
       </div>
 
+      <!-- segment -->
+      <div class="filter-section" data-key="segment">
+        <div class="heading">
+          <span>Segment</span>
+          <button data-clear="segment">Clear</button>
+        </div>
+        <div class="check-list"></div>
+      </div>
+
       <!-- country -->
       <div class="filter-section" data-key="country">
         <div class="heading">
@@ -1703,11 +1694,11 @@
         <div class="check-list"></div>
       </div>
 
-      <!-- segment -->
-      <div class="filter-section" data-key="segment">
+      <!-- specialty -->
+      <div class="filter-section" data-key="specialty">
         <div class="heading">
-          <span>Segment</span>
-          <button data-clear="segment">Clear</button>
+          <span>Specialty</span>
+          <button data-clear="specialty">Clear</button>
         </div>
         <div class="check-list"></div>
       </div>
@@ -1743,7 +1734,7 @@
       <header class="topbar">
         <div class="title">
           <h1>KOL Engagement Tracker</h1>
-          <div class="sub">Quarterly planning · Q4 2025 — Q1 2026 · Skeletal dysplasia (ACH / HCH)</div>
+          <div class="sub">Quarterly planning • Q1 2023 — Q2 2026</div>
         </div>
         <div class="actions">
           <button class="btn outline"><i data-lucide="download"></i> Export</button>
@@ -1785,13 +1776,9 @@
       <header class="topbar">
         <div class="title">
           <h1>Engagements</h1>
-          <div class="sub">Calendar of planned & completed activities by quarter</div>
+          <div class="sub">Planned & completed activities by quarter</div>
         </div>
         <div class="actions">
-          <div class="seg-ctrl" id="engViewToggle">
-            <button data-val="list" data-on="true"><i data-lucide="list"></i> List</button>
-            <button data-val="calendar" data-on="false"><i data-lucide="calendar-days"></i> Calendar</button>
-          </div>
           <button class="btn primary"><i data-lucide="plus"></i> Schedule</button>
         </div>
       </header>
@@ -1830,6 +1817,7 @@
 <div class="scrim" id="scrim"><aside class="drawer" id="drawer"></aside></div>
 
 <!-- Tweaks -->
+<!--
 <button class="tweaks-toggle" id="tweaksToggle" title="Tweaks"><i data-lucide="sliders-horizontal"></i></button>
 <aside class="tweaks" id="tweaks">
   <div class="head">
@@ -1860,6 +1848,7 @@
     </div>
   </div>
 </aside>
+-->
 
 <!-- Compare modal -->
 <div class="compare-scrim" id="compareScrim" data-open="false">
@@ -1869,8 +1858,46 @@
 <!-- Toast -->
 <div class="toast" id="toast" data-show="false"></div>
 
-<script src="data.js?v=8"></script>
-<script src="hifi.js?v=8"></script>
-<script src="screens.js?v=8"></script>
+<!-- Help popover -->
+<div class="help-popover" id="helpPopover" role="dialog" aria-label="About this tool">
+  <div class="pop-title">About this tool</div>
+  <div class="pop-desc">KOL Engagement Tracker is a centralized planning tool for monitoring, segmenting, and managing interactions with Key Opinion Leaders. It gives your team a shared view of each KOL's advocacy status, engagement history, and influence across geographies.</div>
+  <ul class="pop-features">
+    <li>Segment KOLs by advocacy and belief level — Vocal Advocate, Quiet Champion, Cautious Skeptic, and Unconvinced Leader</li>
+    <li>Plan and track engagements by quarter with completed vs. planned visibility</li>
+    <li>Score influence across clinical, geographic, and online dimensions</li>
+    <li>Visualize segment evolution over time with the interactive timeline slider</li>
+    <li>View regional coverage by country with tier and segment breakdowns</li>
+    <li>Compare KOLs side-by-side across key attributes</li>
+    <li>Filter and sort by segment, tier, country, specialty, and engagement status</li>
+  </ul>
+</div>
+
+<script src="data.js?v=24"></script>
+<script src="hifi.js?v=24"></script>
+<script src="screens.js?v=24"></script>
+<script>
+(function () {
+  const pop = document.getElementById('helpPopover');
+  document.querySelectorAll('.help-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (pop.classList.contains('open')) {
+        pop.classList.remove('open');
+        return;
+      }
+      const rect = btn.getBoundingClientRect();
+      const top = rect.top;
+      const left = rect.right + 12;
+      const overflowRight = left + 300 - window.innerWidth;
+      pop.style.top = top + 'px';
+      pop.style.left = (overflowRight > 0 ? left - overflowRight - 8 : left) + 'px';
+      pop.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function () { pop.classList.remove('open'); });
+  pop.addEventListener('click', function (e) { e.stopPropagation(); });
+})();
+</script>
 </body>
 </html>
